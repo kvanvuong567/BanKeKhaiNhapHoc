@@ -1,0 +1,50 @@
+﻿@model BanKeKhaiNhapHoc.Models.DanhSachLop
+@{
+    ViewData["Title"] = "Xóa danh sách lớp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-danger">
+        <div class="card-header bg-danger text-white">
+            <h2 class="mb-0">Xác nhận xóa</h2>
+        </div>
+        <div class="card-body">
+            <h4 class="text-center">Bạn có chắc muốn xóa thông tin dưới đây?</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">ID</dt>
+                <dd class="col-sm-9">@Model.Id</dd>
+
+                <dt class="col-sm-3">Học viên</dt>
+                <dd class="col-sm-9">@Model.HocVien?.HoTen</dd>
+
+                <dt class="col-sm-3">Lớp học</dt>
+                <dd class="col-sm-9">@Model.LopHoc?.TenLop</dd>
+
+                <dt class="col-sm-3">Khóa học</dt>
+                <dd class="col-sm-9">@Model.LopHoc?.TenKhoaHoc</dd>
+
+                <dt class="col-sm-3">Ngày đăng ký</dt>
+                <dd class="col-sm-9">
+                    @(Model.NgayDangKy.HasValue ? Model.NgayDangKy.Value.ToString("dd/MM/yyyy") : "")
+                </dd>
+
+                <dt class="col-sm-3">Ngày duyệt</dt>
+                <dd class="col-sm-9">
+                    @(Model.NgayDuyet.HasValue ? Model.NgayDuyet.Value.ToString("dd/MM/yyyy") : "")
+                </dd>
+
+                <dt class="col-sm-3">Trạng thái</dt>
+                <dd class="col-sm-9">@Model.TrangThai</dd>
+            </dl>
+            <form asp-action="DeleteConfirmed" method="post">
+                <input type="hidden" asp-for="Id" />
+                <div class="text-end">
+                    <button type="submit" class="btn btn-danger me-2"><i class="fas fa-trash"></i> Xóa</button>
+                    <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-undo"></i> Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

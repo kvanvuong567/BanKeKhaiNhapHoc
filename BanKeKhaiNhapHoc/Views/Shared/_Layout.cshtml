@@ -1,0 +1,145 @@
+﻿@using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Hệ thống Bản Kê Khai Nhập Học</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS của Bootstrap và Ace Admin (nếu cần) -->
+    <link rel="stylesheet" href="~/ace/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/ace/assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/ace/dist/css/ace.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    @RenderSection("Styles", required: false)
+    <style>
+        /* Tùy chỉnh CSS nâng cao */
+        body {
+            background: #f4f7f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            background-color: #ffffff;
+            min-height: 100vh;
+            border-right: 1px solid #dee2e6;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+        }
+
+            .sidebar .nav-link {
+                color: #495057;
+                transition: all 0.3s ease;
+            }
+
+                .sidebar .nav-link:hover,
+                .sidebar .nav-link.active {
+                    background-color: #e9ecef;
+                    font-weight: bold;
+                    color: #007bff;
+                }
+
+        main {
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #ffffff;
+            border-top: 1px solid #dee2e6;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thanh điều hướng (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Admin - Bản Kê Khai Nhập Học</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    @if (Context.Session.GetString("Username") != null)
+                    {
+                        <li class="nav-item">
+                            <span class="nav-link">Xin chào, @Context.Session.GetString("Username")</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Logout", "Account")">Đăng xuất</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Login", "Account")">Đăng nhập</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="sidebar-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link @((ViewContext.RouteData.Values["controller"].ToString() == "Home") ? "active" : "")"
+                               href="@Url.Action("Index", "Home")">
+                                <i class="fas fa-home"></i> Trang chủ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @((ViewContext.RouteData.Values["controller"].ToString() == "DanhSachLops") ? "active" : "")"
+                               href="@Url.Action("Index", "DanhSachLops")">
+                                <i class="fas fa-list"></i> Danh sách đăng ký lớp
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @((ViewContext.RouteData.Values["controller"].ToString() == "HocViens") ? "active" : "")"
+                               href="@Url.Action("Index", "HocViens")">
+                                <i class="fas fa-users"></i> Danh sách học viên
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @((ViewContext.RouteData.Values["controller"].ToString() == "LopHocs") ? "active" : "")"
+                               href="@Url.Action("Index", "LopHocs")">
+                                <i class="fas fa-chalkboard-teacher"></i> Danh sách lớp học
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Nội dung chính -->
+            <main role="main" class="col-md-10 ml-sm-auto px-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">&copy; 2025 Hệ thống Bản Kê Khai Nhập Học.</span>
+        </div>
+    </footer>
+
+    <script src="~/ace/assets/js/jquery.min.js"></script>
+    <script src="~/ace/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/ace/dist/js/ace.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

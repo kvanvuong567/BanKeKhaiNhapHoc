@@ -1,0 +1,93 @@
+﻿@model IEnumerable<BanKeKhaiNhapHoc.Models.DanhSachLop>
+@{
+    ViewData["Title"] = "Danh sách học viên trúng tuyển";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .card-header {
+        background-image: linear-gradient(135deg, #1abc9c, #16a085);
+        font-weight: bold;
+    }
+
+    .btn-custom {
+        background-color: #3498db;
+        border-color: #3498db;
+        color: #fff;
+    }
+
+        .btn-custom:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+            color: #fff;
+        }
+
+    .table thead {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+
+    .badge {
+        font-size: 1rem;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-header text-center text-white">
+            <h2 class="mb-0">DANH SÁCH HỌC VIÊN TRÚNG TUYỂN</h2>
+        </div>
+        <div class="card-body">
+            <div class="mb-3 text-right">
+                <a href="@Url.Action("Create")" class="btn btn-custom"><i class="fas fa-plus"></i> Thêm mới</a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">Học viên</th>
+                            <th class="text-center">Lớp học</th>
+                            <th class="text-center">Khóa học</th>
+                            <th class="text-center">Trạng thái</th>
+                            <th class="text-center">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-center">@item.Id</td>
+                                <td>@item.HocVien?.HoTen</td>
+                                <td>@item.LopHoc?.TenLop</td>
+                                <td>@item.LopHoc?.TenKhoaHoc</td>
+                                <td class="text-center">
+                                    @if (item.TrangThai == "Active")
+                                    {
+                                        <span class="badge badge-success">Active</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-secondary">@item.TrangThai</span>
+                                    }
+                                </td>
+                                <td class="text-center">
+                                    <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i> Sửa
+                                    </a>
+                                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-trash"></i> Xóa
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

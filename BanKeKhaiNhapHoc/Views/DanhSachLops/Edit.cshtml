@@ -1,0 +1,51 @@
+﻿@model BanKeKhaiNhapHoc.Models.DanhSachLop
+@{
+    ViewData["Title"] = "Chỉnh sửa danh sách lớp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-header bg-warning text-white">
+            <h2 class="mb-0">Chỉnh sửa thông tin</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="Id" />
+                <div class="mb-3">
+                    <label asp-for="HocVienId" class="form-label">Học viên</label>
+                    <select asp-for="HocVienId" class="form-select" asp-items="ViewBag.HocVienId"></select>
+                    <span asp-validation-for="HocVienId" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LopHocId" class="form-label">Lớp học</label>
+                    <select asp-for="LopHocId" class="form-select" asp-items="ViewBag.LopHocId"></select>
+                    <span asp-validation-for="LopHocId" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="TrangThai" class="form-label">Trạng thái</label>
+                    <input asp-for="TrangThai" class="form-control" />
+                    <span asp-validation-for="TrangThai" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NgayDangKy" class="form-label">Ngày đăng ký</label>
+                    <input asp-for="NgayDangKy" type="date" class="form-control" />
+                    <span asp-validation-for="NgayDangKy" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NgayDuyet" class="form-label">Ngày duyệt</label>
+                    <input asp-for="NgayDuyet" type="date" class="form-control" />
+                    <span asp-validation-for="NgayDuyet" class="text-danger"></span>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-success me-2"><i class="fas fa-save"></i> Lưu thay đổi</button>
+                    <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-undo"></i> Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

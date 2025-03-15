@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\models\\hocvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\models\\hocvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\hocviens\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\hocviens\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\hocvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\controllers\\hocvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\lophocscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\controllers\\lophocscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\hocviens\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\hocviens\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\danhsachlops\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\danhsachlops\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\danhsachlops\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\danhsachlops\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\danhsachlops\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\danhsachlops\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\danhsachlopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\controllers\\danhsachlopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\lophocs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\lophocs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HocVien.cs",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Models\\HocVien.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Models\\HocVien.cs",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Models\\HocVien.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Models\\HocVien.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T08:51:10.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\HocViens\\Edit.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\HocViens\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\HocViens\\Edit.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\HocViens\\Edit.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T08:33:41.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Delete.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Delete.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Delete.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T08:23:02.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Edit.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Edit.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Edit.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T08:22:51.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Index.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Index.cshtml",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Index.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Index.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAUwFEAAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:33:09.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T08:53:53.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\HocViens\\Create.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\HocViens\\Create.cshtml",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\HocViens\\Create.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\HocViens\\Create.cshtml",
+              "ViewState": "AgIAACEBAAAAAAAAAAAAACcBAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T07:17:11.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HocViensController.cs",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\HocViensController.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\HocViensController.cs",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\HocViensController.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\HocViensController.cs",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAIwAYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T07:20:43.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LopHocsController.cs",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\LopHocsController.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\LopHocsController.cs",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\LopHocsController.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\LopHocsController.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAcwM0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T07:53:26.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAcwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T08:38:33.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DanhSachLopsController.cs",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\DanhSachLopsController.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\DanhSachLopsController.cs",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\DanhSachLopsController.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\DanhSachLopsController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAcwIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T07:32:44.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\LopHocs\\Index.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\LopHocs\\Index.cshtml",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\LopHocs\\Index.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\LopHocs\\Index.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAUwEEAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T07:51:10.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwAwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T08:57:17.267Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

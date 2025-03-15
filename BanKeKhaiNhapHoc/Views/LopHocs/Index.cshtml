@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BanKeKhaiNhapHoc.Models.LopHoc>
+
+@{
+    ViewData["Title"] = "Danh sách lớp học";
+}
+
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">Danh sách lớp học</h2>
+            <div>
+                <a asp-action="Create" class="btn btn-success mr-2">
+                    <i class="fas fa-plus"></i> Thêm lớp học
+                </a>
+                <a asp-action="ExportExcel" class="btn btn-outline-light">
+                    <i class="fas fa-file-excel"></i> Xuất Excel
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="text-muted">Dưới đây là danh sách các lớp học hiện có.</p>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Lớp</th>
+                            <th>Mô Tả Lớp</th>
+                            <th>Tên Khóa Học</th>
+                            <th>Ngày Bắt Đầu</th>
+                            <th>Ngày Kết Thúc</th>
+                            <th>Mô Tả Khóa Học</th>
+                            <th class="text-center">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.TenLop</td>
+                                    <td>@item.MoTaLop</td>
+                                    <td>@item.TenKhoaHoc</td>
+                                    <td>@(item.NgayBatDau.HasValue ? item.NgayBatDau.Value.ToString("dd/MM/yyyy") : "")</td>
+                                    <td>@(item.NgayKetThuc.HasValue ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy") : "")</td>
+                                    <td>@item.MoTaKhoaHoc</td>
+                                    <td class="text-center">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                                            <i class="fas fa-edit"></i> Sửa
+                                        </a>
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                                            <i class="fas fa-info-circle"></i> Chi tiết
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash-alt"></i> Xóa
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="8" class="text-center">Không có lớp học nào.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

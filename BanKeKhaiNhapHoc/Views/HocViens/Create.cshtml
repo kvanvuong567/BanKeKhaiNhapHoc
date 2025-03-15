@@ -1,0 +1,332 @@
+﻿@model BanKeKhaiNhapHoc.Models.HocVien
+@{
+    ViewData["Title"] = "Bản Kê Khai Nhập Học";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>BẢN KÊ KHẢI NHẬP HỌC</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                <table class="table table-bordered">
+                    <tbody>
+                        <!-- 1. Họ và tên -->
+                        <tr>
+                            <td>1. Họ và tên (viết chữ in hoa):</td>
+                            <td>
+                                <input asp-for="HoTen" class="form-control" placeholder="VD: NGUYỄN VĂN A" />
+                                <span asp-validation-for="HoTen" class="text-danger"></span>
+                            </td>
+                        </tr>
+
+                        <!-- 2. Giới tính -->
+                        <tr>
+                            <td>2. Giới tính:</td>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" asp-for="GioiTinh" value="true" id="gioiTinhNam" />
+                                    <label class="form-check-label" for="gioiTinhNam">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" asp-for="GioiTinh" value="false" id="gioiTinhNu" />
+                                    <label class="form-check-label" for="gioiTinhNu">Nữ</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- 3. Ngày tháng năm sinh -->
+                        <tr>
+                            <td>3. Ngày tháng năm sinh:</td>
+                            <td>
+                                <input asp-for="NgaySinh" type="date" class="form-control" />
+                            </td>
+                        </tr>
+
+                        <!-- 4. Nơi sinh (Tỉnh) -->
+                        <tr>
+                            <td>4. Nơi sinh (Tỉnh):</td>
+                            <td>
+                                <input asp-for="NoiSinh" class="form-control" placeholder="VD: Hà Nội" />
+                            </td>
+                        </tr>
+
+                        <!-- 5. Quê quán (Tỉnh) -->
+                        <tr>
+                            <td>5. Quê quán (Tỉnh):</td>
+                            <td>
+                                <input asp-for="QueQuan" class="form-control" placeholder="VD: Quảng Ninh" />
+                            </td>
+                        </tr>
+
+                        <!-- 6. Dân tộc -->
+                        <tr>
+                            <td>6. Dân tộc:</td>
+                            <td>
+                                <input asp-for="DanToc" class="form-control" placeholder="VD: Kinh" />
+                            </td>
+                        </tr>
+
+                        <!-- 7. Tôn giáo -->
+                        <tr>
+                            <td>7. Tôn giáo:</td>
+                            <td>
+                                <input asp-for="TonGiao" class="form-control" placeholder="VD: Phật giáo" />
+                            </td>
+                        </tr>
+
+                        <!-- 8. Trình độ lý luận chính trị -->
+                        <tr>
+                            <td>8. Trình độ lý luận chính trị:</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="TrinhDoLyLuanChinhTri" value="Sơ cấp" id="llctSoCap" />
+                                    <label class="form-check-label" for="llctSoCap">Sơ cấp</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="TrinhDoLyLuanChinhTri" value="Trung cấp" id="llctTrungCap" />
+                                    <label class="form-check-label" for="llctTrungCap">Trung cấp</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="TrinhDoLyLuanChinhTri" value="Cao cấp" id="llctCaoCap" />
+                                    <label class="form-check-label" for="llctCaoCap">Cao cấp</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- 9. Trình độ chuyên môn, nghiệp vụ -->
+                        <tr>
+                            <td>9. Trình độ chuyên môn, nghiệp vụ:</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Trung cấp" id="cmTrungCap" />
+                                    <label class="form-check-label" for="cmTrungCap">Trung cấp</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Cao đẳng" id="cmCaoDang" />
+                                    <label class="form-check-label" for="cmCaoDang">Cao đẳng</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Đại học" id="cmDaiHoc" />
+                                    <label class="form-check-label" for="cmDaiHoc">Đại học</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Thạc sĩ" id="cmThacSi" />
+                                    <label class="form-check-label" for="cmThacSi">Thạc sĩ</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Tiến sĩ" id="cmTienSi" />
+                                    <label class="form-check-label" for="cmTienSi">Tiến sĩ</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- 10. Đảng viên đảng CSVN -->
+                        <tr>
+                            <td>10. Đảng viên đảng CSVN:</td>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="DangVienCSVN" value="true" id="dangYes" />
+                                    <label class="form-check-label" for="dangYes">Dự bị</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="DangVienCSVN" value="false" id="dangNo" />
+                                    <label class="form-check-label" for="dangNo">Chính thức</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- 11. Cán bộ, công chức, viên chức -->
+                        <tr>
+                            <td>
+                                11. Cán bộ, công chức, viên chức, nhân viên (chức danh khác) thuộc cơ quan ngành dọc quản lý
+                                (lực lượng vũ trang, ngân hàng, kho bạc, thuế, Tòa án, Viện kiểm sát...):
+                            </td>
+                            <td>
+                                <div class="form-check">
+                                    <input type="checkbox" id="loaiCBCC" name="loaiCBCC" class="form-check-input" />
+                                    <label class="form-check-label" for="loaiCBCC">Tích để chọn</label>
+                                </div>
+                                <div id="mainOptions" style="display: none; margin-left: 20px;">
+                                    <!-- Nhóm Cán bộ -->
+                                    <div>
+                                        <strong>Cán bộ</strong>
+                                        <div style="margin-left: 20px;">
+                                            <div class="form-check">
+                                                <input type="radio" id="canBoCapTinh" name="canBoLevel" value="CapTinh" class="form-check-input" />
+                                                <label class="form-check-label" for="canBoCapTinh">Cấp tỉnh</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" id="canBoCapHuyen" name="canBoLevel" value="CapHuyen" class="form-check-input" />
+                                                <label class="form-check-label" for="canBoCapHuyen">Cấp Huyện</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" id="canBoCapXa" name="canBoLevel" value="CapXa" class="form-check-input" />
+                                                <label class="form-check-label" for="canBoCapXa">Cấp xã</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Nhóm Công chức -->
+                                    <div style="margin-top: 10px;">
+                                        <strong>Công chức</strong>
+                                        <div style="margin-left: 20px;">
+                                            <div class="form-check">
+                                                <input type="radio" id="congChucCapTinh" name="congChucLevel" value="CapTinh" class="form-check-input" />
+                                                <label class="form-check-label" for="congChucCapTinh">Cấp tỉnh</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" id="congChucCapHuyen" name="congChucLevel" value="CapHuyen" class="form-check-input" />
+                                                <label class="form-check-label" for="congChucCapHuyen">Cấp Huyện</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" id="congChucCapXa" name="congChucLevel" value="CapXa" class="form-check-input" />
+                                                <label class="form-check-label" for="congChucCapXa">Cấp xã</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" id="congChucHanhChinh" name="congChucLevel" value="HanhChinh" class="form-check-input" />
+                                                <label class="form-check-label" for="congChucHanhChinh">Công chức hành chính</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Checkbox cho "Người hoạt động không chuyên trách cấp xã" -->
+                                    <div style="margin-top: 10px;">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="chkNDT" name="chkNDT" class="form-check-input" />
+                                            <label class="form-check-label" for="chkNDT">Người hoạt động không chuyên trách cấp xã</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- 12. Chức vụ, chức danh -->
+                        <tr>
+                            <td>12. Chức vụ, chức danh:</td>
+                            <td>
+                                <!-- a) Đảng -->
+                                <label><strong>Đảng:</strong></label>
+                                <input type="text" name="ChucVuDang" class="form-control" placeholder="VD: Bí thư, Phó bí thư..." />
+
+                                <!-- b) Chính quyền -->
+                                <label class="mt-2"><strong>Chính quyền:</strong></label>
+                                <div style="margin-left: 20px;">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="ChucVuChinhQuyen" value="Tỉnh" id="chinhQuyenTinh" />
+                                        <label class="form-check-label" for="chinhQuyenTinh">Tỉnh</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="ChucVuChinhQuyen" value="Huyện" id="chinhQuyenHuyen" />
+                                        <label class="form-check-label" for="chinhQuyenHuyen">Huyện</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="ChucVuChinhQuyen" value="Xã" id="chinhQuyenXa" />
+                                        <label class="form-check-label" for="chinhQuyenXa">Xã</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="ChucVuChinhQuyen" value="Khác" id="chinhQuyenKhac" />
+                                        <label class="form-check-label" for="chinhQuyenKhac">Khác</label>
+                                    </div>
+                                    <!-- Ô nhập khi chọn "Khác" -->
+                                    <input type="text" class="form-control mt-2" name="ChucVuChinhQuyenKhac" id="chucVuChinhQuyenKhac" style="display:none;" placeholder="Nhập chức vụ/chức danh khác..." />
+                                </div>
+
+                                <!-- c) Đoàn thể -->
+                                <label class="mt-2"><strong>Đoàn thể:</strong></label>
+                                <input type="text" name="ChucVuDoanThe" class="form-control" placeholder="VD: Chủ tịch công đoàn..." />
+                            </td>
+                        </tr>
+
+                        <!-- 13. Đơn vị công tác -->
+                        <tr>
+                            <td>13. Đơn vị công tác:</td>
+                            <td>
+                                <input type="text" name="DonViCongTac" class="form-control" placeholder="VD: UBND, Sở ban ngành..." />
+                            </td>
+                        </tr>
+
+                        <!-- 14. Ngạch công chức, viên chức -->
+                        <tr>
+                            <td>14. Ngạch công chức, viên chức:</td>
+                            <td>
+                                <input asp-for="NgachCongChuc" class="form-control" placeholder="VD: Ngạch A, B..." />
+                            </td>
+                        </tr>
+
+                        <!-- 15. Hệ số lương -->
+                        <tr>
+                            <td>15. Hệ số lương:</td>
+                            <td>
+                                <input asp-for="HeSoLuong" class="form-control" placeholder="VD: 3.12" />
+                            </td>
+                        </tr>
+
+                        <!-- 16. Hệ số phụ cấp chức vụ -->
+                        <tr>
+                            <td>16. Hệ số phụ cấp chức vụ:</td>
+                            <td>
+                                <input type="text" name="HeSoPhuCapChucVu" class="form-control" placeholder="VD: 0.5" />
+                            </td>
+                        </tr>
+
+                        <!-- 17. Liên hệ (ĐT + Email) -->
+                        <tr>
+                            <td>17. Liên hệ (ĐT + Email):</td>
+                            <td>
+                                <label>Điện thoại di động:</label>
+                                <input asp-for="DienThoaiDiDong" class="form-control mb-2" placeholder="VD: 0912345678" />
+                                <label>Email:</label>
+                                <input type="email" name="Email" class="form-control" placeholder="VD: abc@gmail.com" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <!-- Nút Lưu -->
+                    <button type="submit" name="actionType" value="save" class="btn btn-primary">
+                        <i class="fa fa-save"></i> Lưu
+                    </button>
+                    <!-- Nút Xuất PDF -->
+                    <button type="submit" name="actionType" value="pdf" class="btn btn-success">
+                        <i class="fa fa-file-pdf-o"></i> Xuất PDF
+                    </button>
+                    <a class="btn btn-secondary" href="@Url.Action("Index", "HocViens")">Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Ẩn/hiện nhóm Cán bộ, Công chức
+        const loaiCBCC = document.getElementById('loaiCBCC');
+        const mainOptions = document.getElementById('mainOptions');
+
+        if (loaiCBCC && mainOptions) {
+            loaiCBCC.addEventListener('change', function () {
+                mainOptions.style.display = this.checked ? 'block' : 'none';
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                mainOptions.style.display = loaiCBCC.checked ? 'block' : 'none';
+            });
+        }
+
+        // Ẩn/hiện ô nhập "Khác" cho Chính quyền
+        const radioChinhQuyen = document.getElementsByName('ChucVuChinhQuyen');
+        const chucVuChinhQuyenKhac = document.getElementById('chucVuChinhQuyenKhac');
+
+        if (radioChinhQuyen && chucVuChinhQuyenKhac) {
+            radioChinhQuyen.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    chucVuChinhQuyenKhac.style.display = (this.value === 'Khác') ? 'block' : 'none';
+                });
+            });
+        }
+    </script>
+}

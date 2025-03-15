@@ -1,0 +1,143 @@
+﻿@model BanKeKhaiNhapHoc.Models.HocVien
+
+@{
+    ViewData["Title"] = "Xóa Bản Kê Khai";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Xóa Bản Kê Khai Nhập Học</h1>
+<h3 class="text-center text-danger">Bạn có chắc chắn muốn xóa bản kê khai này không?</h3>
+<hr />
+
+<div>
+    <h4>Thông tin Bản Kê Khai</h4>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GioiTinh)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GioiTinh)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NgaySinh)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NoiSinh)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NoiSinh)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QueQuan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QueQuan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DanToc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DanToc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TonGiao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TonGiao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TrinhDoLyLuanChinhTri)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TrinhDoLyLuanChinhTri)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TrinhDoChuyenMonNghiepVu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TrinhDoChuyenMonNghiepVu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DangVienCSVN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DangVienCSVN)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LoaiCongChuc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoaiCongChuc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChucVu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChucVu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChinhQuyen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChinhQuyen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DoanThe)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DoanThe)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DonViCongTac)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DonViCongTac)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NgachCongChuc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NgachCongChuc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HeSoLuong)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HeSoLuong)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HeSoPhuCapChucVu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HeSoPhuCapChucVu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DienThoaiDiDong)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DienThoaiDiDong)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Xóa" class="btn btn-danger" />
+        |
+        <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
