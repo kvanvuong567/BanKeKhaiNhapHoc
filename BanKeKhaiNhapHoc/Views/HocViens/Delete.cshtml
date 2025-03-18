@@ -5,135 +5,100 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="text-center">Xóa Bản Kê Khai Nhập Học</h1>
-<h3 class="text-center text-danger">Bạn có chắc chắn muốn xóa bản kê khai này không?</h3>
-<hr />
-
-<div>
-    <h4>Thông tin Bản Kê Khai</h4>
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HoTen)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.HoTen)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.GioiTinh)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.GioiTinh)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NgaySinh)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NgaySinh)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NoiSinh)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NoiSinh)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QueQuan)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QueQuan)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DanToc)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DanToc)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TonGiao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TonGiao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TrinhDoLyLuanChinhTri)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TrinhDoLyLuanChinhTri)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TrinhDoChuyenMonNghiepVu)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TrinhDoChuyenMonNghiepVu)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DangVienCSVN)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DangVienCSVN)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.LoaiCongChuc)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.LoaiCongChuc)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ChucVu)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ChucVu)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ChinhQuyen)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ChinhQuyen)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DoanThe)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DoanThe)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DonViCongTac)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DonViCongTac)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NgachCongChuc)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NgachCongChuc)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HeSoLuong)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.HeSoLuong)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HeSoPhuCapChucVu)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.HeSoPhuCapChucVu)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DienThoaiDiDong)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DienThoaiDiDong)
-        </dd>
-    </dl>
-
-    <form asp-action="Delete" method="post">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Xóa" class="btn btn-danger" />
-        |
-        <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
-    </form>
+<div class="container mt-5">
+    <div class="card border-danger">
+        <div class="card-header bg-danger text-white text-center">
+            <h3>Xóa Bản Kê Khai Nhập Học</h3>
+        </div>
+        <div class="card-body">
+            <p class="text-center text-danger font-weight-bold">
+                Bạn có chắc chắn muốn xóa bản kê khai này không?
+            </p>
+            <hr />
+            <h4 class="mb-4">Thông tin Bản Kê Khai</h4>
+            <dl class="row">
+                <!-- 1. Họ và tên -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.HoTen)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.HoTen)</dd>
+                <!-- 2. Giới tính -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.GioiTinh)</dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.GioiTinh)
+                </dd>
+                <!-- 3. Ngày tháng năm sinh -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.NgaySinh)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.NgaySinh)</dd>
+                <!-- 4. Nơi sinh -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.NoiSinh)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.NoiSinh)</dd>
+                <!-- 5. Quê quán -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.QueQuan)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.QueQuan)</dd>
+                <!-- 6. Dân tộc -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DanToc)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.DanToc)</dd>
+                <!-- 7. Tôn giáo -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.TonGiao)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.TonGiao)</dd>
+                <!-- 8. Trình độ lý luận chính trị -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.TrinhDoLyLuanChinhTri)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.TrinhDoLyLuanChinhTri)</dd>
+                <!-- 9. Trình độ chuyên môn, nghiệp vụ -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.TrinhDoChuyenMonNghiepVu)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.TrinhDoChuyenMonNghiepVu)</dd>
+                <!-- 10. Đảng viên đảng CSVN -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DangVienCSVN)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.DangVienCSVN)</dd>
+                <!-- 11. Cán bộ - Cấp -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.CanBo)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.CanBo)</dd>
+                <!-- 12. Công chức - Cấp -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.CongChucLevel)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.CongChucLevel)</dd>
+                <!-- 13. Người hoạt động không chuyên trách cấp xã -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.NguoiHoatDongKhongChuyenTrach)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.NguoiHoatDongKhongChuyenTrach)</dd>
+                <!-- 14. Đảng -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.ChucVu)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.ChucVu)</dd>
+                <!-- 15. Chính quyền -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.ChinhQuyen)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.ChinhQuyen)</dd>
+                <!-- 16. Đoàn thể -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DoanThe)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.DoanThe)</dd>
+                <!-- 17. Đơn vị công tác -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DonViCongTac)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.DonViCongTac)</dd>
+                <!-- 18. Ngạch công chức, viên chức -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.NgachCongChuc)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.NgachCongChuc)</dd>
+                <!-- 19. Hệ số lương -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.HeSoLuong)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.HeSoLuong)</dd>
+                <!-- 20. Hệ số phụ cấp chức vụ -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.HeSoPhuCapChucVu)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.HeSoPhuCapChucVu)</dd>
+                <!-- 21. Điện thoại di động -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.DienThoaiDiDong)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.DienThoaiDiDong)</dd>
+                <!-- 22. Email -->
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Email)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Email)</dd>
+            </dl>
+        </div>
+        <div class="card-footer text-center">
+            <form asp-action="Delete" method="post" class="d-inline">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger mr-2">
+                    <i class="fa fa-trash"></i> Xóa
+                </button>
+            </form>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="fa fa-arrow-left"></i> Quay lại danh sách
+            </a>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

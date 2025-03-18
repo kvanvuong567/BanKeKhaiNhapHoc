@@ -7,7 +7,7 @@
 <div class="container mt-4">
     <div class="card">
         <div class="card-header text-center">
-            <h2>BẢN KÊ KHẢI NHẬP HỌC</h2>
+            <h2>BẢN KÊ KHAI NHẬP HỌC</h2>
         </div>
         <div class="card-body">
             <form asp-action="Create" method="post">
@@ -27,11 +27,19 @@
                             <td>2. Giới tính:</td>
                             <td>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" asp-for="GioiTinh" value="true" id="gioiTinhNam" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="GioiTinh"
+                                           value="true"
+                                           id="gioiTinhNam" />
                                     <label class="form-check-label" for="gioiTinhNam">Nam</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" asp-for="GioiTinh" value="false" id="gioiTinhNu" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="GioiTinh"
+                                           value="false"
+                                           id="gioiTinhNu" />
                                     <label class="form-check-label" for="gioiTinhNu">Nữ</label>
                                 </div>
                             </td>
@@ -81,16 +89,29 @@
                         <tr>
                             <td>8. Trình độ lý luận chính trị:</td>
                             <td>
+                                <!-- Bind vào property TrinhDoLyLuanChinhTri -->
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="TrinhDoLyLuanChinhTri" value="Sơ cấp" id="llctSoCap" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="TrinhDoLyLuanChinhTri"
+                                           value="Sơ cấp"
+                                           id="llctSoCap" />
                                     <label class="form-check-label" for="llctSoCap">Sơ cấp</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="TrinhDoLyLuanChinhTri" value="Trung cấp" id="llctTrungCap" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="TrinhDoLyLuanChinhTri"
+                                           value="Trung cấp"
+                                           id="llctTrungCap" />
                                     <label class="form-check-label" for="llctTrungCap">Trung cấp</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="TrinhDoLyLuanChinhTri" value="Cao cấp" id="llctCaoCap" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="TrinhDoLyLuanChinhTri"
+                                           value="Cao cấp"
+                                           id="llctCaoCap" />
                                     <label class="form-check-label" for="llctCaoCap">Cao cấp</label>
                                 </div>
                             </td>
@@ -100,24 +121,45 @@
                         <tr>
                             <td>9. Trình độ chuyên môn, nghiệp vụ:</td>
                             <td>
+                                <!-- Bind vào property TrinhDoChuyenMonNghiepVu -->
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Trung cấp" id="cmTrungCap" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="TrinhDoChuyenMonNghiepVu"
+                                           value="Trung cấp"
+                                           id="cmTrungCap" />
                                     <label class="form-check-label" for="cmTrungCap">Trung cấp</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Cao đẳng" id="cmCaoDang" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="TrinhDoChuyenMonNghiepVu"
+                                           value="Cao đẳng"
+                                           id="cmCaoDang" />
                                     <label class="form-check-label" for="cmCaoDang">Cao đẳng</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Đại học" id="cmDaiHoc" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="TrinhDoChuyenMonNghiepVu"
+                                           value="Đại học"
+                                           id="cmDaiHoc" />
                                     <label class="form-check-label" for="cmDaiHoc">Đại học</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Thạc sĩ" id="cmThacSi" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="TrinhDoChuyenMonNghiepVu"
+                                           value="Thạc sĩ"
+                                           id="cmThacSi" />
                                     <label class="form-check-label" for="cmThacSi">Thạc sĩ</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="TrinhDoChuyenMonNghiepVu" value="Tiến sĩ" id="cmTienSi" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="TrinhDoChuyenMonNghiepVu"
+                                           value="Tiến sĩ"
+                                           id="cmTienSi" />
                                     <label class="form-check-label" for="cmTienSi">Tiến sĩ</label>
                                 </div>
                             </td>
@@ -127,43 +169,69 @@
                         <tr>
                             <td>10. Đảng viên đảng CSVN:</td>
                             <td>
+                                <!-- Bind vào property DangVienCSVN -->
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="DangVienCSVN" value="true" id="dangYes" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="DangVienCSVN"
+                                           value="true"
+                                           id="dangYes" />
                                     <label class="form-check-label" for="dangYes">Dự bị</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="DangVienCSVN" value="false" id="dangNo" />
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           asp-for="DangVienCSVN"
+                                           value="false"
+                                           id="dangNo" />
                                     <label class="form-check-label" for="dangNo">Chính thức</label>
                                 </div>
                             </td>
                         </tr>
 
-                        <!-- 11. Cán bộ, công chức, viên chức -->
+                        <!-- 11. Cán bộ, công chức, viên chức, nhân viên... -->
                         <tr>
                             <td>
                                 11. Cán bộ, công chức, viên chức, nhân viên (chức danh khác) thuộc cơ quan ngành dọc quản lý
                                 (lực lượng vũ trang, ngân hàng, kho bạc, thuế, Tòa án, Viện kiểm sát...):
                             </td>
                             <td>
+                                <!-- Checkbox bật/tắt hiển thị -->
                                 <div class="form-check">
-                                    <input type="checkbox" id="loaiCBCC" name="loaiCBCC" class="form-check-input" />
+                                    <input type="checkbox"
+                                           id="loaiCBCC"
+                                           class="form-check-input" />
                                     <label class="form-check-label" for="loaiCBCC">Tích để chọn</label>
                                 </div>
+
+                                <!-- Khối ẩn/hiện -->
                                 <div id="mainOptions" style="display: none; margin-left: 20px;">
                                     <!-- Nhóm Cán bộ -->
                                     <div>
                                         <strong>Cán bộ</strong>
                                         <div style="margin-left: 20px;">
                                             <div class="form-check">
-                                                <input type="radio" id="canBoCapTinh" name="canBoLevel" value="CapTinh" class="form-check-input" />
+                                                <input class="form-check-input"
+                                                       type="radio"
+                                                       asp-for="CanBo"
+                                                       value="Cấp tỉnh"
+                                                       id="canBoCapTinh" />
                                                 <label class="form-check-label" for="canBoCapTinh">Cấp tỉnh</label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" id="canBoCapHuyen" name="canBoLevel" value="CapHuyen" class="form-check-input" />
-                                                <label class="form-check-label" for="canBoCapHuyen">Cấp Huyện</label>
+                                                <input class="form-check-input"
+                                                       type="radio"
+                                                       asp-for="CanBo"
+                                                       value="Cấp huyện"
+                                                       id="canBoCapHuyen" />
+                                                <label class="form-check-label" for="canBoCapHuyen">Cấp huyện</label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" id="canBoCapXa" name="canBoLevel" value="CapXa" class="form-check-input" />
+                                                <input class="form-check-input"
+                                                       type="radio"
+                                                       asp-for="CanBo"
+                                                       value="Cấp xã"
+                                                       id="canBoCapXa" />
                                                 <label class="form-check-label" for="canBoCapXa">Cấp xã</label>
                                             </div>
                                         </div>
@@ -174,19 +242,35 @@
                                         <strong>Công chức</strong>
                                         <div style="margin-left: 20px;">
                                             <div class="form-check">
-                                                <input type="radio" id="congChucCapTinh" name="congChucLevel" value="CapTinh" class="form-check-input" />
+                                                <input class="form-check-input"
+                                                       type="radio"
+                                                       asp-for="CongChucLevel"
+                                                       value="Cấp tỉnh"
+                                                       id="congChucCapTinh" />
                                                 <label class="form-check-label" for="congChucCapTinh">Cấp tỉnh</label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" id="congChucCapHuyen" name="congChucLevel" value="CapHuyen" class="form-check-input" />
-                                                <label class="form-check-label" for="congChucCapHuyen">Cấp Huyện</label>
+                                                <input class="form-check-input"
+                                                       type="radio"
+                                                       asp-for="CongChucLevel"
+                                                       value="Cấp huyện"
+                                                       id="congChucCapHuyen" />
+                                                <label class="form-check-label" for="congChucCapHuyen">Cấp huyện</label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" id="congChucCapXa" name="congChucLevel" value="CapXa" class="form-check-input" />
+                                                <input class="form-check-input"
+                                                       type="radio"
+                                                       asp-for="CongChucLevel"
+                                                       value="Cấp xã"
+                                                       id="congChucCapXa" />
                                                 <label class="form-check-label" for="congChucCapXa">Cấp xã</label>
                                             </div>
                                             <div class="form-check">
-                                                <input type="radio" id="congChucHanhChinh" name="congChucLevel" value="HanhChinh" class="form-check-input" />
+                                                <input class="form-check-input"
+                                                       type="radio"
+                                                       asp-for="CongChucLevel"
+                                                       value="Hành chính"
+                                                       id="congChucHanhChinh" />
                                                 <label class="form-check-label" for="congChucHanhChinh">Công chức hành chính</label>
                                             </div>
                                         </div>
@@ -195,7 +279,10 @@
                                     <!-- Checkbox cho "Người hoạt động không chuyên trách cấp xã" -->
                                     <div style="margin-top: 10px;">
                                         <div class="form-check">
-                                            <input type="checkbox" id="chkNDT" name="chkNDT" class="form-check-input" />
+                                            <input class="form-check-input"
+                                                   type="checkbox"
+                                                   asp-for="NguoiHoatDongKhongChuyenTrach"
+                                                   id="chkNDT" />
                                             <label class="form-check-label" for="chkNDT">Người hoạt động không chuyên trách cấp xã</label>
                                         </div>
                                     </div>
@@ -209,34 +296,57 @@
                             <td>
                                 <!-- a) Đảng -->
                                 <label><strong>Đảng:</strong></label>
-                                <input type="text" name="ChucVuDang" class="form-control" placeholder="VD: Bí thư, Phó bí thư..." />
+                                <input asp-for="ChucVu" class="form-control" placeholder="VD: Bí thư, Phó bí thư..." />
 
                                 <!-- b) Chính quyền -->
                                 <label class="mt-2"><strong>Chính quyền:</strong></label>
                                 <div style="margin-left: 20px;">
+                                    <!-- Radio Tỉnh/Huyện/Xã/Khác -->
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="ChucVuChinhQuyen" value="Tỉnh" id="chinhQuyenTinh" />
+                                        <input class="form-check-input"
+                                               type="radio"
+                                               asp-for="ChinhQuyen"
+                                               value="Tỉnh"
+                                               id="chinhQuyenTinh" />
                                         <label class="form-check-label" for="chinhQuyenTinh">Tỉnh</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="ChucVuChinhQuyen" value="Huyện" id="chinhQuyenHuyen" />
+                                        <input class="form-check-input"
+                                               type="radio"
+                                               asp-for="ChinhQuyen"
+                                               value="Huyện"
+                                               id="chinhQuyenHuyen" />
                                         <label class="form-check-label" for="chinhQuyenHuyen">Huyện</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="ChucVuChinhQuyen" value="Xã" id="chinhQuyenXa" />
+                                        <input class="form-check-input"
+                                               type="radio"
+                                               asp-for="ChinhQuyen"
+                                               value="Xã"
+                                               id="chinhQuyenXa" />
                                         <label class="form-check-label" for="chinhQuyenXa">Xã</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="ChucVuChinhQuyen" value="Khác" id="chinhQuyenKhac" />
+                                        <input class="form-check-input"
+                                               type="radio"
+                                               asp-for="ChinhQuyen"
+                                               value="Khác"
+                                               id="chinhQuyenKhac" />
                                         <label class="form-check-label" for="chinhQuyenKhac">Khác</label>
                                     </div>
+
                                     <!-- Ô nhập khi chọn "Khác" -->
-                                    <input type="text" class="form-control mt-2" name="ChucVuChinhQuyenKhac" id="chucVuChinhQuyenKhac" style="display:none;" placeholder="Nhập chức vụ/chức danh khác..." />
+                                    <!-- Thuộc tính ChucVuChinhQuyenKhac (nếu bạn muốn lưu riêng) -->
+                                    <input asp-for="ChucVuChinhQuyenKhac"
+                                           class="form-control mt-2"
+                                           id="chucVuChinhQuyenKhac"
+                                           style="display:none;"
+                                           placeholder="Nhập chức vụ/chức danh khác..." />
                                 </div>
 
                                 <!-- c) Đoàn thể -->
                                 <label class="mt-2"><strong>Đoàn thể:</strong></label>
-                                <input type="text" name="ChucVuDoanThe" class="form-control" placeholder="VD: Chủ tịch công đoàn..." />
+                                <input asp-for="DoanThe" class="form-control" placeholder="VD: Chủ tịch công đoàn..." />
                             </td>
                         </tr>
 
@@ -244,7 +354,7 @@
                         <tr>
                             <td>13. Đơn vị công tác:</td>
                             <td>
-                                <input type="text" name="DonViCongTac" class="form-control" placeholder="VD: UBND, Sở ban ngành..." />
+                                <input asp-for="DonViCongTac" class="form-control" placeholder="VD: UBND, Sở ban ngành..." />
                             </td>
                         </tr>
 
@@ -268,7 +378,7 @@
                         <tr>
                             <td>16. Hệ số phụ cấp chức vụ:</td>
                             <td>
-                                <input type="text" name="HeSoPhuCapChucVu" class="form-control" placeholder="VD: 0.5" />
+                                <input asp-for="HeSoPhuCapChucVu" class="form-control" placeholder="VD: 0.5" />
                             </td>
                         </tr>
 
@@ -279,7 +389,7 @@
                                 <label>Điện thoại di động:</label>
                                 <input asp-for="DienThoaiDiDong" class="form-control mb-2" placeholder="VD: 0912345678" />
                                 <label>Email:</label>
-                                <input type="email" name="Email" class="form-control" placeholder="VD: abc@gmail.com" />
+                                <input asp-for="Email" type="email" class="form-control" placeholder="VD: abc@gmail.com" />
                             </td>
                         </tr>
                     </tbody>
@@ -303,7 +413,7 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
-        // Ẩn/hiện nhóm Cán bộ, Công chức
+        // 1) Ẩn/hiện nhóm Cán bộ, Công chức khi checkbox "Tích để chọn" thay đổi
         const loaiCBCC = document.getElementById('loaiCBCC');
         const mainOptions = document.getElementById('mainOptions');
 
@@ -311,20 +421,27 @@
             loaiCBCC.addEventListener('change', function () {
                 mainOptions.style.display = this.checked ? 'block' : 'none';
             });
-
             document.addEventListener('DOMContentLoaded', function () {
                 mainOptions.style.display = loaiCBCC.checked ? 'block' : 'none';
             });
         }
 
-        // Ẩn/hiện ô nhập "Khác" cho Chính quyền
-        const radioChinhQuyen = document.getElementsByName('ChucVuChinhQuyen');
-        const chucVuChinhQuyenKhac = document.getElementById('chucVuChinhQuyenKhac');
+        // 2) Ẩn/hiện ô nhập "Khác" cho Chính quyền
+        //    Nếu user chọn radio "Khác", hiển thị ô text; ngược lại thì ẩn
+        const radioChinhQuyen = document.getElementsByName('ChinhQuyen');
+        const inputChinhQuyenKhac = document.getElementById('chucVuChinhQuyenKhac');
 
-        if (radioChinhQuyen && chucVuChinhQuyenKhac) {
+        if (radioChinhQuyen && inputChinhQuyenKhac) {
+            // Mỗi khi radio thay đổi, kiểm tra nếu value = "Khác" thì hiển thị
             radioChinhQuyen.forEach(radio => {
                 radio.addEventListener('change', function() {
-                    chucVuChinhQuyenKhac.style.display = (this.value === 'Khác') ? 'block' : 'none';
+                    if (this.value === 'Khác') {
+                        inputChinhQuyenKhac.style.display = 'block';
+                    } else {
+                        inputChinhQuyenKhac.style.display = 'none';
+                        // Nếu muốn xóa nội dung khi user bỏ chọn "Khác"
+                        inputChinhQuyenKhac.value = '';
+                    }
                 });
             });
         }

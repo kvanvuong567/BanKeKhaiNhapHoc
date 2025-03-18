@@ -10,123 +10,185 @@
 <div>
     <h4>Thông tin học viên</h4>
     <dl class="row">
+        <!-- 1. Họ và tên -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.HoTen)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.HoTen)
         </dd>
+
+        <!-- 2. Giới tính -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.GioiTinh)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.GioiTinh)
         </dd>
+
+        <!-- 3. Ngày tháng năm sinh -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.NgaySinh)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NgaySinh)
         </dd>
+
+        <!-- 4. Nơi sinh -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.NoiSinh)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NoiSinh)
         </dd>
+
+        <!-- 5. Quê quán -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.QueQuan)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.QueQuan)
         </dd>
+
+        <!-- 6. Dân tộc -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DanToc)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DanToc)
         </dd>
+
+        <!-- 7. Tôn giáo -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.TonGiao)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TonGiao)
         </dd>
+
+        <!-- 8. Trình độ lý luận chính trị -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.TrinhDoLyLuanChinhTri)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TrinhDoLyLuanChinhTri)
         </dd>
+
+        <!-- 9. Trình độ chuyên môn, nghiệp vụ -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.TrinhDoChuyenMonNghiepVu)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TrinhDoChuyenMonNghiepVu)
         </dd>
+
+        <!-- 10. Đảng viên đảng CSVN -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DangVienCSVN)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DangVienCSVN)
         </dd>
+
+        <!-- 11. Cán bộ - Cấp -->
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.LoaiCongChuc)
+            @Html.DisplayNameFor(model => model.CanBo)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.LoaiCongChuc)
+            @Html.DisplayFor(model => model.CanBo)
         </dd>
+
+        <!-- 11.2 Công chức - Cấp -->
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CongChucLevel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CongChucLevel)
+        </dd>
+
+        <!-- 11.3 Người hoạt động không chuyên trách cấp xã -->
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NguoiHoatDongKhongChuyenTrach)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NguoiHoatDongKhongChuyenTrach)
+        </dd>
+
+        <!-- 12. Chức vụ (Đảng) -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ChucVu)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ChucVu)
         </dd>
+
+        <!-- 12.2. Chính quyền -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ChinhQuyen)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ChinhQuyen)
         </dd>
+
+        <!-- 12.3 Đoàn thể -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DoanThe)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DoanThe)
         </dd>
+
+        <!-- 13. Đơn vị công tác -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DonViCongTac)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DonViCongTac)
         </dd>
+
+        <!-- 14. Ngạch công chức, viên chức -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.NgachCongChuc)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NgachCongChuc)
         </dd>
+
+        <!-- 15. Hệ số lương -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.HeSoLuong)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.HeSoLuong)
         </dd>
+
+        <!-- 16. Hệ số phụ cấp chức vụ -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.HeSoPhuCapChucVu)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.HeSoPhuCapChucVu)
         </dd>
+
+        <!-- 17. Điện thoại di động -->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.DienThoaiDiDong)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DienThoaiDiDong)
         </dd>
+
+        <!-- Thêm Email (nếu muốn hiển thị) -->
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
     </dl>
 </div>
+
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>

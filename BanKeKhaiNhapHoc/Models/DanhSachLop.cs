@@ -12,7 +12,6 @@ namespace BanKeKhaiNhapHoc.Models
         public int HocVienId { get; set; }
         public virtual HocVien? HocVien { get; set; }
 
-        // FK tới Lop
         public int LopHocId { get; set; }
         public virtual LopHoc? LopHoc { get; set; }
 

@@ -66,14 +66,16 @@
             <a class="navbar-brand" href="#">Admin - Bản Kê Khai Nhập Học</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    @if (Context.Session.GetString("Username") != null)
+                    @{
+                        var username = Context.Session?.GetString("Username");
+                    }
+                    @if (!string.IsNullOrEmpty(username))
                     {
                         <li class="nav-item">
-                            <span class="nav-link">Xin chào, @Context.Session.GetString("Username")</span>
+                            <span class="nav-link">Xin chào, @username</span>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("Logout", "Account")">Đăng xuất</a>
@@ -97,27 +99,34 @@
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link @((ViewContext.RouteData.Values["controller"].ToString() == "Home") ? "active" : "")"
+                            <a class="nav-link @( (ViewContext.RouteData.Values["controller"]?.ToString() == "Home") ? "active" : "" )"
                                href="@Url.Action("Index", "Home")">
                                 <i class="fas fa-home"></i> Trang chủ
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @((ViewContext.RouteData.Values["controller"].ToString() == "DanhSachLops") ? "active" : "")"
+                            <a class="nav-link @( (ViewContext.RouteData.Values["controller"]?.ToString() == "DanhSachLops") ? "active" : "" )"
                                href="@Url.Action("Index", "DanhSachLops")">
                                 <i class="fas fa-list"></i> Danh sách đăng ký lớp
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @((ViewContext.RouteData.Values["controller"].ToString() == "HocViens") ? "active" : "")"
+                            <a class="nav-link @( (ViewContext.RouteData.Values["controller"]?.ToString() == "HocViens") ? "active" : "" )"
                                href="@Url.Action("Index", "HocViens")">
                                 <i class="fas fa-users"></i> Danh sách học viên
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @((ViewContext.RouteData.Values["controller"].ToString() == "LopHocs") ? "active" : "")"
+                            <a class="nav-link @( (ViewContext.RouteData.Values["controller"]?.ToString() == "LopHocs") ? "active" : "" )"
                                href="@Url.Action("Index", "LopHocs")">
                                 <i class="fas fa-chalkboard-teacher"></i> Danh sách lớp học
+                            </a>
+                        </li>
+                        <!-- Link đến trang xem mã QR -->
+                        <li class="nav-item">
+                            <a class="nav-link @( (ViewContext.RouteData.Values["controller"]?.ToString() == "QRCode") ? "active" : "" )"
+                               href="@Url.Action("Show", "QRCode")">
+                                <i class="fas fa-qrcode"></i> Xem mã QR
                             </a>
                         </li>
                     </ul>

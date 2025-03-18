@@ -293,3 +293,9 @@ C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\r
 C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
 C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\obj\Debug\net8.0\BanKeKhaiNhapHoc.sourcelink.json
+C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\QRCoder.dll
+C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\System.Private.Windows.Core.dll
+C:\Users\songc\source\repos\BanKeKhaiNhapHoc\BanKeKhaiNhapHoc\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll

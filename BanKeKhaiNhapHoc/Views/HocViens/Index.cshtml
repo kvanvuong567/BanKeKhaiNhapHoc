@@ -1,7 +1,15 @@
 ﻿@model IEnumerable<BanKeKhaiNhapHoc.Models.HocVien>
 @{
     ViewBag.Title = "Danh sách Học Viên";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    // Nếu đang xuất PDF, không sử dụng Layout chính để tránh xung đột CSS
+    if (ViewBag.IsPdf == true)
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 }
 
 <div class="container mt-4">
@@ -10,11 +18,19 @@
             <h2 class="mb-0 text-center">DANH SÁCH HỌC VIÊN</h2>
         </div>
         <div class="card-body">
-            <div class="d-flex justify-content-end mb-3">
-                <a href="~/HocViens/Create" class="btn btn-success">
-                    <i class="fas fa-plus"></i> Thêm Học Viên
-                </a>
-            </div>
+            @* Hiển thị nút điều hướng chỉ khi không xuất PDF *@
+            @if (ViewBag.IsPdf != true)
+            {
+                <div class="d-flex justify-content-end mb-3">
+                    <a href="~/HocViens/Create" class="btn btn-success">
+                        <i class="fas fa-plus"></i> Thêm Học Viên
+                    </a>
+                    <a href="@Url.Action("ExportPdf", "HocViens")" class="btn btn-info ml-2">
+                        <i class="fas fa-file-pdf"></i> Xuất PDF
+                    </a>
+                </div>
+            }
+
             <div class="table-responsive">
                 <table class="table table-bordered table-sm text-center align-middle">
                     <thead class="table-dark">
@@ -24,14 +40,18 @@
                             <th colspan="7" style="vertical-align: middle;">THÔNG TIN CHUNG</th>
                             <th colspan="2" style="vertical-align: middle;">TRÌNH ĐỘ</th>
                             <th rowspan="2" style="vertical-align: middle;">ĐẢNG CSVN</th>
+                            <th colspan="3" style="vertical-align: middle;">LOẠI CÔNG CHỨC</th>
                             <th colspan="3" style="vertical-align: middle;">CHỨC VỤ</th>
                             <th colspan="2" style="vertical-align: middle;">LƯƠNG</th>
                             <th colspan="2" style="vertical-align: middle;">LIÊN HỆ</th>
-                            <th rowspan="2" style="vertical-align: middle;">THAO TÁC</th>
+                            @if (ViewBag.IsPdf != true)
+                            {
+                                <th rowspan="2" style="vertical-align: middle;">THAO TÁC</th>
+                            }
                         </tr>
                         <!-- Hàng tiêu đề thứ hai -->
                         <tr>
-                            <!-- 7 cột con của "THÔNG TIN CHUNG" -->
+                            <!-- THÔNG TIN CHUNG: 7 cột -->
                             <th style="white-space: nowrap;">Họ và tên</th>
                             <th style="white-space: nowrap;">Ngày sinh</th>
                             <th style="white-space: nowrap;">Giới tính</th>
@@ -39,17 +59,21 @@
                             <th style="white-space: nowrap;">Tôn giáo</th>
                             <th style="white-space: nowrap;">Quê quán</th>
                             <th style="white-space: nowrap;">Nơi sinh</th>
-                            <!-- 2 cột con của "TRÌNH ĐỘ" -->
+                            <!-- TRÌNH ĐỘ: 2 cột -->
                             <th style="white-space: nowrap;">Lý luận CT</th>
                             <th style="white-space: nowrap;">Chuyên môn</th>
-                            <!-- 3 cột con của "CHỨC VỤ" -->
+                            <!-- LOẠI CÔNG CHỨC: 3 cột -->
+                            <th style="white-space: nowrap;">Cán bộ</th>
+                            <th style="white-space: nowrap;">Công chức</th>
+                            <th style="white-space: nowrap;">Không chuyên trách</th>
+                            <!-- CHỨC VỤ: 3 cột -->
                             <th style="white-space: nowrap;">Đảng</th>
                             <th style="white-space: nowrap;">Chính quyền</th>
                             <th style="white-space: nowrap;">Đoàn thể</th>
-                            <!-- 2 cột con của "LƯƠNG" -->
+                            <!-- LƯƠNG: 2 cột -->
                             <th style="white-space: nowrap;">Hệ số lương</th>
                             <th style="white-space: nowrap;">Hệ số PC</th>
-                            <!-- 2 cột con của "LIÊN HỆ" -->
+                            <!-- LIÊN HỆ: 2 cột -->
                             <th style="white-space: nowrap;">Điện thoại</th>
                             <th style="white-space: nowrap;">Email</th>
                         </tr>
@@ -63,7 +87,7 @@
                             <tr>
                                 <!-- STT -->
                                 <td>@stt</td>
-                                
+
                                 <!-- THÔNG TIN CHUNG -->
                                 <td>@hv.HoTen</td>
                                 <td>@hv.NgaySinh?.ToString("dd/MM/yyyy")</td>
@@ -74,38 +98,48 @@
                                 <td>@hv.TonGiao</td>
                                 <td>@hv.QueQuan</td>
                                 <td>@hv.NoiSinh</td>
-                                
+
                                 <!-- TRÌNH ĐỘ -->
                                 <td>@hv.TrinhDoLyLuanChinhTri</td>
                                 <td>@hv.TrinhDoChuyenMonNghiepVu</td>
-                                
+
                                 <!-- ĐẢNG CSVN -->
                                 <td>
                                     @(hv.DangVienCSVN == true ? "Có" : hv.DangVienCSVN == false ? "Không" : "")
                                 </td>
-                                
+
+                                <!-- LOẠI CÔNG CHỨC -->
+                                <td>@hv.CanBo</td>
+                                <td>@hv.CongChucLevel</td>
+                                <td>
+                                    @(hv.NguoiHoatDongKhongChuyenTrach ? "Có" : "Không")
+                                </td>
+
                                 <!-- CHỨC VỤ -->
                                 <td>@hv.ChucVu</td>
                                 <td>@hv.ChinhQuyen</td>
                                 <td>@hv.DoanThe</td>
-                                
+
                                 <!-- LƯƠNG -->
                                 <td>@hv.HeSoLuong</td>
                                 <td>@hv.HeSoPhuCapChucVu</td>
-                                
+
                                 <!-- LIÊN HỆ -->
                                 <td>@hv.DienThoaiDiDong</td>
                                 <td>@hv.Email</td>
-                                
-                                <!-- THAO TÁC -->
-                                <td>
-                                    <a href="~/HocViens/Edit/@hv.Id" class="btn btn-sm btn-warning">
-                                        <i class="fas fa-edit"></i> Sửa
-                                    </a>
-                                    <a href="~/HocViens/Delete/@hv.Id" class="btn btn-sm btn-danger">
-                                        <i class="fas fa-trash-alt"></i> Xóa
-                                    </a>
-                                </td>
+
+                                @if (ViewBag.IsPdf != true)
+                                {
+                                    <!-- THAO TÁC -->
+                                    <td>
+                                        <a href="~/HocViens/Edit/@hv.Id" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i> Sửa
+                                        </a>
+                                        <a href="~/HocViens/Delete/@hv.Id" class="btn btn-sm btn-danger">
+                                            <i class="fas fa-trash-alt"></i> Xóa
+                                        </a>
+                                    </td>
+                                }
                             </tr>
                             stt++;
                         }

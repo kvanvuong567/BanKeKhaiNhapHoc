@@ -63,6 +63,10 @@ namespace BanKeKhaiNhapHoc.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CanBo")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<string>("ChinhQuyen")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -70,6 +74,14 @@ namespace BanKeKhaiNhapHoc.Migrations
                     b.Property<string>("ChucVu")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ChucVuChinhQuyenKhac")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("CongChucLevel")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("DanToc")
                         .HasMaxLength(50)
@@ -108,16 +120,15 @@ namespace BanKeKhaiNhapHoc.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("LoaiCongChuc")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<string>("NgachCongChuc")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime?>("NgaySinh")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("NguoiHoatDongKhongChuyenTrach")
+                        .HasColumnType("bit");
 
                     b.Property<string>("NoiSinh")
                         .HasMaxLength(200)
