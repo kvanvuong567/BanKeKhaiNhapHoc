@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BanKeKhaiNhapHoc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f36b47440929761d30a4ebeb030fea66dd28a37b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c4e498efe2ebeb8d3668c3d09d0b62a43365247")]
 [assembly: System.Reflection.AssemblyProductAttribute("BanKeKhaiNhapHoc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BanKeKhaiNhapHoc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

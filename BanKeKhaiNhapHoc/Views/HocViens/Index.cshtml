@@ -1,81 +1,173 @@
 ﻿@model IEnumerable<BanKeKhaiNhapHoc.Models.HocVien>
+
 @{
     ViewBag.Title = "Danh sách Học Viên";
-    // Nếu đang xuất PDF, không sử dụng Layout chính để tránh xung đột CSS
-    if (ViewBag.IsPdf == true)
-    {
-        Layout = null;
-    }
-    else
-    {
-        Layout = "~/Views/Shared/_Layout.cshtml";
-    }
+    Layout = (ViewBag.IsPdf == true) ? null : "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container mt-4">
-    <div class="card shadow-lg">
-        <div class="card-header bg-primary text-white">
-            <h2 class="mb-0 text-center">DANH SÁCH HỌC VIÊN</h2>
-        </div>
-        <div class="card-body">
-            @* Hiển thị nút điều hướng chỉ khi không xuất PDF *@
-            @if (ViewBag.IsPdf != true)
-            {
-                <div class="d-flex justify-content-end mb-3">
-                    <a href="~/HocViens/Create" class="btn btn-success">
-                        <i class="fas fa-plus"></i> Thêm Học Viên
-                    </a>
-                    <a href="@Url.Action("ExportPdf", "HocViens")" class="btn btn-info ml-2">
-                        <i class="fas fa-file-pdf"></i> Xuất PDF
-                    </a>
-                </div>
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f4f6f9;
+    }
+
+    .card {
+        border: none;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+    .card-header {
+        background: linear-gradient(45deg, #4facfe, #00f2fe);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 1rem 1rem;
+    }
+
+    .header-buttons {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+        .header-buttons a {
+            margin-left: 0.5rem;
+            border-radius: 0.4rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+            .header-buttons a:hover {
+                transform: translateY(-2px);
             }
 
+    .btn-success {
+        background-color: #28a745 !important; 
+        border: none;
+    }
+
+        .btn-success:hover {
+            background-color: #218838 !important;
+        }
+
+    .btn-info {
+        background-color: #17a2b8 !important;
+        border: none;
+    }
+
+        .btn-info:hover {
+            background-color: #138496 !important;
+        }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .table-responsive {
+        margin-top: 1rem;
+    }
+
+    /* Tiêu đề bảng màu xám nhạt, chữ đậm đen */
+    .table thead {
+        background-color: #e9ecef;
+        color: #495057;
+    }
+
+        .table thead th {
+            vertical-align: middle;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+    .table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    /* Nút Sửa, Xóa, Duyệt nhỏ gọn */
+    .btn-sm {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+        border-radius: 0.3rem;
+    }
+
+    .badge {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .badge-warning {
+        background-color: #ffc107 !important;
+    }
+
+    .badge-success {
+        background-color: #28a745 !important;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="mb-0 text-center">DANH SÁCH HỌC VIÊN</h2>
+        </div>
+        <br />
+        @if (ViewBag.IsPdf != true)
+        {
+            <div class="mb-3 text-right">
+                <a href="~/HocViens/Create" class="btn btn-success">
+                    <i class="fas fa-plus"></i> Thêm Học Viên
+                </a>
+                <a href="@Url.Action("ExportExcel", "HocViens")" class="btn btn-info">
+                    <i class="fas fa-file-excel"></i> Xuất Excel
+                </a>
+            </div>
+        }
+        <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered table-sm text-center align-middle">
-                    <thead class="table-dark">
+                <table class="table table-bordered table-hover text-center align-middle">
+                    <thead>
                         <!-- Hàng tiêu đề thứ nhất -->
                         <tr>
-                            <th rowspan="2" style="vertical-align: middle;">STT</th>
-                            <th colspan="7" style="vertical-align: middle;">THÔNG TIN CHUNG</th>
-                            <th colspan="2" style="vertical-align: middle;">TRÌNH ĐỘ</th>
-                            <th rowspan="2" style="vertical-align: middle;">ĐẢNG CSVN</th>
-                            <th colspan="3" style="vertical-align: middle;">LOẠI CÔNG CHỨC</th>
-                            <th colspan="3" style="vertical-align: middle;">CHỨC VỤ</th>
-                            <th colspan="2" style="vertical-align: middle;">LƯƠNG</th>
-                            <th colspan="2" style="vertical-align: middle;">LIÊN HỆ</th>
+                            <th rowspan="2" class="align-middle">STT</th>
+                            <th colspan="8" class="align-middle">THÔNG TIN CHUNG</th>
+                            <th colspan="2" class="align-middle">TRÌNH ĐỘ</th>
+                            <th rowspan="2" class="align-middle">ĐẢNG CSVN</th>
+                            <th colspan="3" class="align-middle">LOẠI CÔNG CHỨC</th>
+                            <th colspan="3" class="align-middle">CHỨC VỤ</th>
+                            <th colspan="2" class="align-middle">LƯƠNG</th>
+                            <th colspan="2" class="align-middle">LIÊN HỆ</th>
                             @if (ViewBag.IsPdf != true)
                             {
-                                <th rowspan="2" style="vertical-align: middle;">THAO TÁC</th>
+                                <th rowspan="2" class="align-middle">THAO TÁC</th>
                             }
                         </tr>
                         <!-- Hàng tiêu đề thứ hai -->
                         <tr>
-                            <!-- THÔNG TIN CHUNG: 7 cột -->
-                            <th style="white-space: nowrap;">Họ và tên</th>
-                            <th style="white-space: nowrap;">Ngày sinh</th>
-                            <th style="white-space: nowrap;">Giới tính</th>
-                            <th style="white-space: nowrap;">Dân tộc</th>
-                            <th style="white-space: nowrap;">Tôn giáo</th>
-                            <th style="white-space: nowrap;">Quê quán</th>
-                            <th style="white-space: nowrap;">Nơi sinh</th>
-                            <!-- TRÌNH ĐỘ: 2 cột -->
-                            <th style="white-space: nowrap;">Lý luận CT</th>
-                            <th style="white-space: nowrap;">Chuyên môn</th>
-                            <!-- LOẠI CÔNG CHỨC: 3 cột -->
-                            <th style="white-space: nowrap;">Cán bộ</th>
-                            <th style="white-space: nowrap;">Công chức</th>
-                            <th style="white-space: nowrap;">Không chuyên trách</th>
-                            <!-- CHỨC VỤ: 3 cột -->
-                            <th style="white-space: nowrap;">Đảng</th>
-                            <th style="white-space: nowrap;">Chính quyền</th>
-                            <th style="white-space: nowrap;">Đoàn thể</th>
-                            <!-- LƯƠNG: 2 cột -->
-                            <th style="white-space: nowrap;">Hệ số lương</th>
-                            <th style="white-space: nowrap;">Hệ số PC</th>
-                            <!-- LIÊN HỆ: 2 cột -->
-                            <th style="white-space: nowrap;">Điện thoại</th>
-                            <th style="white-space: nowrap;">Email</th>
+                            <th>Họ và tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Giới tính</th>
+                            <th>Dân tộc</th>
+                            <th>Tôn giáo</th>
+                            <th>Quê quán</th>
+                            <th>Nơi sinh</th>
+                            <th>Lớp</th>
+                            <th>Lý luận CT</th>
+                            <th>Chuyên môn</th>
+                            <th>Cán bộ</th>
+                            <th>Công chức</th>
+                            <th>Không chuyên trách</th>
+                            <th>Đảng</th>
+                            <th>Chính quyền</th>
+                            <th>Đoàn thể</th>
+                            <th>Hệ số lương</th>
+                            <th>Hệ số PC</th>
+                            <th>Điện thoại</th>
+                            <th>Email</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,10 +177,7 @@
                         @foreach (var hv in Model)
                         {
                             <tr>
-                                <!-- STT -->
                                 <td>@stt</td>
-
-                                <!-- THÔNG TIN CHUNG -->
                                 <td>@hv.HoTen</td>
                                 <td>@hv.NgaySinh?.ToString("dd/MM/yyyy")</td>
                                 <td>
@@ -98,46 +187,68 @@
                                 <td>@hv.TonGiao</td>
                                 <td>@hv.QueQuan</td>
                                 <td>@hv.NoiSinh</td>
-
-                                <!-- TRÌNH ĐỘ -->
-                                <td>@hv.TrinhDoLyLuanChinhTri</td>
-                                <td>@hv.TrinhDoChuyenMonNghiepVu</td>
-
-                                <!-- ĐẢNG CSVN -->
                                 <td>
-                                    @(hv.DangVienCSVN == true ? "Có" : hv.DangVienCSVN == false ? "Không" : "")
+                                    @if (hv.DanhSachLops != null && hv.DanhSachLops.Any())
+                                    {
+                                        @string.Join(", ", hv.DanhSachLops.Select(ds => ds.LopHoc?.TenLop))
+                                    }
+                                    else
+                                    {
+                                        if (!hv.IsApproved)
+                                        {
+                                            <span style="color: orange; font-weight: bold;">Chưa chọn lớp</span>
+                                        }
+                                        else
+                                        {
+                                            <span style="color: red; font-weight: bold;">Đã bị xóa khỏi danh sách trúng tuyển</span>
+                                        }
+                                    }
                                 </td>
 
-                                <!-- LOẠI CÔNG CHỨC -->
+                                <td>@hv.TrinhDoLyLuanChinhTri</td>
+                                <td>@hv.TrinhDoChuyenMonNghiepVu</td>
+                                <td>
+                                    @(hv.DangVienCSVN == true ? "Dự bị" : hv.DangVienCSVN == false ? "Chính thức" : "")
+                                </td>
                                 <td>@hv.CanBo</td>
                                 <td>@hv.CongChucLevel</td>
                                 <td>
                                     @(hv.NguoiHoatDongKhongChuyenTrach ? "Có" : "Không")
                                 </td>
-
-                                <!-- CHỨC VỤ -->
                                 <td>@hv.ChucVu</td>
                                 <td>@hv.ChinhQuyen</td>
                                 <td>@hv.DoanThe</td>
-
-                                <!-- LƯƠNG -->
                                 <td>@hv.HeSoLuong</td>
                                 <td>@hv.HeSoPhuCapChucVu</td>
-
-                                <!-- LIÊN HỆ -->
                                 <td>@hv.DienThoaiDiDong</td>
                                 <td>@hv.Email</td>
-
                                 @if (ViewBag.IsPdf != true)
                                 {
-                                    <!-- THAO TÁC -->
                                     <td>
-                                        <a href="~/HocViens/Edit/@hv.Id" class="btn btn-sm btn-warning">
+                                        <a href="~/HocViens/Edit/@hv.Id" class="btn btn-sm btn-warning mb-1">
                                             <i class="fas fa-edit"></i> Sửa
                                         </a>
-                                        <a href="~/HocViens/Delete/@hv.Id" class="btn btn-sm btn-danger">
+                                        <a href="~/HocViens/Delete/@hv.Id" class="btn btn-sm btn-danger mb-1">
                                             <i class="fas fa-trash-alt"></i> Xóa
                                         </a>
+                                        @if (!hv.IsApproved)
+                                        {
+                                            if (hv.DanhSachLops != null && hv.DanhSachLops.Any())
+                                            {
+                                                var lopDaChon = hv.DanhSachLops.FirstOrDefault()?.LopHocId;
+                                                <a href="~/HocViens/Approve/@hv.Id?lopHocId=@lopDaChon" class="btn btn-sm btn-success">
+                                                    <i class="fas fa-check"></i> Duyệt
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-warning">Chưa chọn lớp</span>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-success">Đã duyệt</span>
+                                        }
                                     </td>
                                 }
                             </tr>

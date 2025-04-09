@@ -180,6 +180,15 @@ namespace BanKeKhaiNhapHoc.Controllers
                         worksheet.Cell(row, 5).Value = item.NgayBatDau.HasValue ? item.NgayBatDau.Value.ToString("dd/MM/yyyy") : "";
                         worksheet.Cell(row, 6).Value = item.NgayKetThuc.HasValue ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy") : "";
                         worksheet.Cell(row, 7).Value = item.MoTaKhoaHoc;
+
+                        // Thêm viền cho mỗi ô dữ liệu
+                        for (int col = 1; col <= 7; col++)
+                        {
+                            var cell = worksheet.Cell(row, col);
+                            cell.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+                            cell.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+                        }
+
                         row++;
                     }
 

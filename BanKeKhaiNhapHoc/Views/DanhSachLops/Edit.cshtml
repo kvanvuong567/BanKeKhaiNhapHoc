@@ -3,47 +3,146 @@
     ViewData["Title"] = "Chỉnh sửa danh sách lớp";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!-- Thêm Google Fonts với font "Poppins" -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
-<div class="container mt-4">
-    <div class="card shadow-lg">
-        <div class="card-header bg-warning text-white">
-            <h2 class="mb-0">Chỉnh sửa thông tin</h2>
+<style>
+    :root {
+        --primary-color: #ffc107;
+        --primary-dark: #ffb347;
+        --light-bg: #f8f9fa;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--light-bg);
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .card {
+        border: none;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: #fff;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+    .form-control, .form-select {
+        border-radius: 0.5rem;
+        border: 1px solid #ced4da;
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+        }
+
+    .btn-primary {
+        border-radius: 0.5rem;
+        background-color: var(--primary-color);
+        border: none;
+        transition: all 0.3s ease;
+        width: 100%;
+        padding: 0.75rem;
+        font-weight: 600;
+    }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+    .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 1.5rem;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Chỉnh sửa thông tin
         </div>
         <div class="card-body">
             <form asp-action="Edit" method="post">
                 <input type="hidden" asp-for="Id" />
-                <div class="mb-3">
-                    <label asp-for="HocVienId" class="form-label">Học viên</label>
-                    <select asp-for="HocVienId" class="form-select" asp-items="ViewBag.HocVienId"></select>
+
+                <div class="form-group">
+                    <label asp-for="HocVienId" class="control-label"></label>
+                    <select asp-for="HocVienId" class="form-control" asp-items="ViewBag.HocVienId"></select>
                     <span asp-validation-for="HocVienId" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
-                    <label asp-for="LopHocId" class="form-label">Lớp học</label>
-                    <select asp-for="LopHocId" class="form-select" asp-items="ViewBag.LopHocId"></select>
+
+                <div class="form-group">
+                    <label asp-for="LopHocId" class="control-label"></label>
+                    <select asp-for="LopHocId" class="form-control" asp-items="ViewBag.LopHocId"></select>
                     <span asp-validation-for="LopHocId" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
-                    <label asp-for="TrangThai" class="form-label">Trạng thái</label>
-                    <input asp-for="TrangThai" class="form-control" />
+
+                <div class="form-group">
+                    <label asp-for="TrangThai" class="control-label"></label>
+                    <select asp-for="TrangThai" class="form-control">
+                        <option value="Đậu">Đậu</option>
+                        <option value="Rớt">Rớt</option>
+                    </select>
                     <span asp-validation-for="TrangThai" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
-                    <label asp-for="NgayDangKy" class="form-label">Ngày đăng ký</label>
+
+                <div class="form-group">
+                    <label asp-for="NgayDangKy" class="control-label"></label>
                     <input asp-for="NgayDangKy" type="date" class="form-control" />
                     <span asp-validation-for="NgayDangKy" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
-                    <label asp-for="NgayDuyet" class="form-label">Ngày duyệt</label>
+
+                <div class="form-group">
+                    <label asp-for="NgayDuyet" class="control-label"></label>
                     <input asp-for="NgayDuyet" type="date" class="form-control" />
                     <span asp-validation-for="NgayDuyet" class="text-danger"></span>
                 </div>
-                <div class="text-end">
-                    <button type="submit" class="btn btn-success me-2"><i class="fas fa-save"></i> Lưu thay đổi</button>
-                    <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-undo"></i> Hủy</a>
+
+                <div class="form-group">
+                    <input type="submit" value="Lưu thay đổi" class="btn btn-primary" />
                 </div>
             </form>
         </div>
     </div>
+    <a asp-action="Index" class="back-link">Hủy</a>
 </div>
 
 @section Scripts {

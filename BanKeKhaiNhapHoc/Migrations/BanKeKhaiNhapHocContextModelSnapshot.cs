@@ -120,6 +120,9 @@ namespace BanKeKhaiNhapHoc.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
+
                     b.Property<string>("NgachCongChuc")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");

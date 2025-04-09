@@ -3,14 +3,93 @@
     ViewData["Title"] = "Xóa danh sách lớp";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!-- Thêm Google Fonts với font "Poppins" -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
-<div class="container mt-4">
-    <div class="card shadow-lg border-danger">
-        <div class="card-header bg-danger text-white">
-            <h2 class="mb-0">Xác nhận xóa</h2>
+<style>
+    :root {
+        --danger-color: #dc3545;
+        --danger-hover: #c82333;
+        --light-bg: #f8f9fa;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--light-bg);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .card {
+        border: none;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, var(--danger-color), var(--danger-hover));
+        color: #fff;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+        .card-body h3 {
+            margin-bottom: 1.5rem;
+        }
+
+    dl.row dt {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    dl.row dd {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-danger:hover {
+        background-color: var(--danger-hover);
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        margin-left: 0.5rem;
+    }
+
+    .back-link {
+        text-align: center;
+        margin-top: 1rem;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            Xác nhận xóa
         </div>
         <div class="card-body">
-            <h4 class="text-center">Bạn có chắc muốn xóa thông tin dưới đây?</h4>
+            <h3 class="text-center">Bạn có chắc muốn xóa thông tin dưới đây?</h3>
             <hr />
             <dl class="row">
                 <dt class="col-sm-3">ID</dt>
@@ -38,11 +117,11 @@
                 <dt class="col-sm-3">Trạng thái</dt>
                 <dd class="col-sm-9">@Model.TrangThai</dd>
             </dl>
-            <form asp-action="DeleteConfirmed" method="post">
+            <form asp-action="Delete" method="post">
                 <input type="hidden" asp-for="Id" />
-                <div class="text-end">
-                    <button type="submit" class="btn btn-danger me-2"><i class="fas fa-trash"></i> Xóa</button>
-                    <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-undo"></i> Hủy</a>
+                <div class="text-center">
+                    <input type="submit" value="Xóa" class="btn btn-danger" />
+                    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
                 </div>
             </form>
         </div>

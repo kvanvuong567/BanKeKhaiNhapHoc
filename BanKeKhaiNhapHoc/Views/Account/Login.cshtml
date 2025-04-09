@@ -6,97 +6,110 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Đăng nhập - Hệ thống Bản Kê Khai Nhập Học</title>
+    <title>Đăng nhập - VIP PRO Sáng</title>
     <link rel="stylesheet" href="~/ace/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/ace/assets/fontawesome/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-
-        .full-height {
-            min-height: 100vh;
-        }
-
-        .d-flex-center {
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
+            margin: 0;
         }
 
-        .login-card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
+        .login-container {
+            position: relative;
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
         }
 
-            .login-card .card-body {
-                padding: 3rem;
-            }
-
-            .login-card .card-title {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-                font-weight: 700;
-                color: #333;
-            }
+        .card-title {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
         .form-control {
-            border-radius: 5px;
-            padding: 0.85rem;
-            border: 1px solid #ced4da;
-            box-shadow: none;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            color: #333;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
         }
 
+            .form-control::placeholder {
+                color: #666;
+            }
+
             .form-control:focus {
-                border-color: #80bdff;
-                box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+                outline: none;
+                background: rgba(255, 255, 255, 1);
+                box-shadow: 0 0 10px rgba(85, 99, 222, 0.25);
             }
 
         .btn-custom {
-            background-color: #007bff;
-            border: none;
-            font-size: 1.2rem;
-            padding: 0.85rem;
+            background: linear-gradient(90deg, #89f7fe, #66a6ff);
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 14px;
             width: 100%;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 166, 255, 0.4);
+            margin-top: 10px;
         }
 
             .btn-custom:hover {
-                background-color: #0056b3;
+                background: linear-gradient(90deg, #66a6ff, #89f7fe);
+                transform: scale(1.05);
+                box-shadow: 0 8px 20px rgba(102, 166, 255, 0.6);
             }
 
         .alert {
             font-size: 1rem;
+            color: #fff;
+            background: rgba(255, 0, 0, 0.5);
+            border: none;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="container full-height d-flex-center">
-        <div class="col-md-8 col-lg-6">
-            <div class="card login-card">
-                <div class="card-body">
-                    <h3 class="card-title text-center">Đăng nhập</h3>
-                    <form asp-action="Login" method="post">
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Tên đăng nhập</label>
-                            <input type="text" name="username" id="username" class="form-control" placeholder="Nhập tên đăng nhập" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Mật khẩu</label>
-                            <input type="password" name="password" id="password" class="form-control" placeholder="Nhập mật khẩu" required />
-                        </div>
-                        <button type="submit" class="btn btn-custom">Đăng nhập</button>
-                    </form>
-                    @if (ViewBag.Error != null)
-                    {
-                        <div class="alert alert-danger mt-3" role="alert">
-                            @ViewBag.Error
-                        </div>
-                    }
-                </div>
+    <div class="login-container">
+        <h3 class="card-title">ĐĂNG NHẬP</h3>
+        <form asp-action="Login" method="post">
+            <div class="mb-3">
+                <input type="text" name="username" id="username" class="form-control" placeholder="Tên đăng nhập" required />
             </div>
-        </div>
+            <div class="mb-3">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Mật khẩu" required />
+            </div>
+            <button type="submit" class="btn btn-custom">Đăng nhập ngay</button>
+        </form>
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert" role="alert">
+                @ViewBag.Error
+            </div>
+        }
     </div>
     <script src="~/ace/assets/js/jquery.min.js"></script>
     <script src="~/ace/assets/js/bootstrap.bundle.min.js"></script>

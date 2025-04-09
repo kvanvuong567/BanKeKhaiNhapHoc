@@ -4,33 +4,154 @@
     ViewData["Title"] = "Danh sách lớp học";
 }
 
+<!-- Thêm Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --primary-gradient-start: #17a2b8;
+        --primary-gradient-end: #138496;
+        --btn-success: #28a745;
+        --btn-info: #17a2b8;
+        --btn-warning: #ffc107;
+        --btn-danger: #dc3545;
+        --table-header-bg: #343a40;
+        --table-header-color: #f8f9fa;
+        --bg-light: #f4f6f9;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--bg-light);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .card {
+        border: none;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.8s ease-in-out;
+        background: #fff;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+        color: #fff;
+        font-weight: 600;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.75rem;
+        }
+
+    .btn-custom {
+        transition: all 0.3s ease;
+    }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-custom + .btn-custom {
+            margin-left: 0.5rem;
+        }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+        .card-body p {
+            margin-bottom: 1rem;
+        }
+
+    .table-responsive {
+        border: none;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+        .table thead {
+            background: var(--table-header-bg);
+            color: var(--table-header-color);
+        }
+
+            .table thead th {
+                vertical-align: middle;
+                text-align: center;
+                padding: 0.75rem;
+                border: 0;
+            }
+
+        .table tbody td {
+            padding: 0.75rem;
+            vertical-align: middle;
+        }
+
+        .table tbody tr {
+            transition: background-color 0.3s ease;
+        }
+
+            .table tbody tr:hover {
+                background-color: #f1f1f1;
+            }
+
+    .qr-code {
+        max-width: 100px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .qr-code:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+</style>
+
 <div class="container mt-5">
     <div class="card shadow">
-        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
-            <h2 class="mb-0">Danh sách lớp học</h2>
-            <div>
-                <a asp-action="Create" class="btn btn-success mr-2">
-                    <i class="fas fa-plus"></i> Thêm lớp học
-                </a>
-                <a asp-action="ExportExcel" class="btn btn-outline-light">
-                    <i class="fas fa-file-excel"></i> Xuất Excel
-                </a>
-            </div>
+        <div class="card-header">
+            <h2>DANH SÁCH LỚP HỌC</h2>
+        </div>
+        <br />
+        <div class="mb-3 text-right">
+            <a asp-action="Create" class="btn btn-success btn-custom">
+                <i class="fas fa-plus"></i> Thêm lớp học
+            </a>
+            <a asp-action="ExportExcel" class="btn btn-info btn-custom">
+                <i class="fas fa-file-excel"></i> Xuất Excel
+            </a>
         </div>
         <div class="card-body">
-            <p class="text-muted">Dưới đây là danh sách các lớp học hiện có.</p>
             <div class="table-responsive">
-                <table class="table table-hover table-bordered table-striped">
-                    <thead class="thead-dark">
+                <table class="table table-hover table-bordered table-striped mb-0">
+                    <thead>
                         <tr>
-                            <th>ID</th>
+                            <th class="text-center">ID</th>
                             <th>Tên Lớp</th>
                             <th>Mô Tả Lớp</th>
                             <th>Tên Khóa Học</th>
-                            <th>Ngày Bắt Đầu</th>
-                            <th>Ngày Kết Thúc</th>
+                            <th class="text-center">Ngày Bắt Đầu</th>
+                            <th class="text-center">Ngày Kết Thúc</th>
                             <th>Mô Tả Khóa Học</th>
                             <th class="text-center">Hành động</th>
+                            <th class="text-center">QR Code</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,23 +160,31 @@
                             foreach (var item in Model)
                             {
                                 <tr>
-                                    <td>@item.Id</td>
+                                    <td class="text-center">@item.Id</td>
                                     <td>@item.TenLop</td>
                                     <td>@item.MoTaLop</td>
                                     <td>@item.TenKhoaHoc</td>
-                                    <td>@(item.NgayBatDau.HasValue ? item.NgayBatDau.Value.ToString("dd/MM/yyyy") : "")</td>
-                                    <td>@(item.NgayKetThuc.HasValue ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy") : "")</td>
+                                    <td class="text-center">
+                                        @(item.NgayBatDau.HasValue ? item.NgayBatDau.Value.ToString("dd/MM/yyyy") : "")
+                                    </td>
+                                    <td class="text-center">
+                                        @(item.NgayKetThuc.HasValue ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy") : "")
+                                    </td>
                                     <td>@item.MoTaKhoaHoc</td>
                                     <td class="text-center">
                                         <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
                                             <i class="fas fa-edit"></i> Sửa
                                         </a>
-                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
-                                            <i class="fas fa-info-circle"></i> Chi tiết
-                                        </a>
                                         <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
                                             <i class="fas fa-trash-alt"></i> Xóa
                                         </a>
+                                    </td>
+                                    <!-- Cột QR Code -->
+                                    <td class="text-center">
+                                        <img src="@Url.Action("GenerateQRCodeSvgForClass", "QRCode", new { lopHocId = item.Id })"
+                                             alt="QR Code"
+                                             class="qr-code"
+                                             data-lophocid="@item.Id" />
                                     </td>
                                 </tr>
                             }
@@ -63,7 +192,7 @@
                         else
                         {
                             <tr>
-                                <td colspan="8" class="text-center">Không có lớp học nào.</td>
+                                <td colspan="9" class="text-center">Không có lớp học nào.</td>
                             </tr>
                         }
                     </tbody>
@@ -72,3 +201,17 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        // Bắt sự kiện click trên hình QR Code để chuyển hướng tới trang tạo học viên với tham số lopHocId
+        document.querySelectorAll('.qr-code').forEach(function(img) {
+            img.addEventListener('click', function() {
+                var lopHocId = this.getAttribute('data-lophocid');
+                if (lopHocId) {
+                    window.location.href = '@Url.Action("Create", "HocViens")' + '?lopHocId=' + lopHocId;
+                }
+            });
+        });
+    </script>
+}

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj": {}
+    "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj": {
+    "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj",
+        "projectUniqueName": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj",
         "projectName": "BanKeKhaiNhapHoc",
-        "projectPath": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj",
-        "packagesPath": "C:\\Users\\songc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\obj\\",
+        "projectPath": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj",
+        "packagesPath": "C:\\Users\\kvanv\\.nuget\\packages\\",
+        "outputPath": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\songc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kvanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -53,6 +53,10 @@
             "ClosedXML": {
               "target": "Package",
               "version": "[0.104.2, )"
+            },
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -100,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

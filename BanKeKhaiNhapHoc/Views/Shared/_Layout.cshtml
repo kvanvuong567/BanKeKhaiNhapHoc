@@ -5,14 +5,12 @@
     <meta charset="utf-8" />
     <title>@ViewData["Title"] - Hệ thống Bản Kê Khai Nhập Học</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS của Bootstrap và Ace Admin (nếu cần) -->
     <link rel="stylesheet" href="~/ace/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/ace/assets/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="~/ace/dist/css/ace.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     @RenderSection("Styles", required: false)
     <style>
-        /* Tùy chỉnh CSS nâng cao */
         body {
             background: #f4f7f9;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -60,10 +58,9 @@
     </style>
 </head>
 <body>
-    <!-- Thanh điều hướng (Navbar) -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Admin - Bản Kê Khai Nhập Học</a>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Admin - Bản Kê Khai Nhập Học</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -75,8 +72,9 @@
                     @if (!string.IsNullOrEmpty(username))
                     {
                         <li class="nav-item">
-                            <span class="nav-link">Xin chào, @username</span>
+                            <span class="nav-link">Xin chào: @username</span>
                         </li>
+                        <br>
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("Logout", "Account")">Đăng xuất</a>
                         </li>
@@ -91,6 +89,14 @@
             </div>
         </div>
     </nav>
+
+    <!-- Hiển thị thông báo (ví dụ: đăng xuất thành công) -->
+    @if (TempData["LogoutMessage"] != null)
+    {
+        <div class="alert alert-success m-3">
+            @TempData["LogoutMessage"]
+        </div>
+    }
 
     <div class="container-fluid">
         <div class="row">
@@ -120,13 +126,6 @@
                             <a class="nav-link @( (ViewContext.RouteData.Values["controller"]?.ToString() == "LopHocs") ? "active" : "" )"
                                href="@Url.Action("Index", "LopHocs")">
                                 <i class="fas fa-chalkboard-teacher"></i> Danh sách lớp học
-                            </a>
-                        </li>
-                        <!-- Link đến trang xem mã QR -->
-                        <li class="nav-item">
-                            <a class="nav-link @( (ViewContext.RouteData.Values["controller"]?.ToString() == "QRCode") ? "active" : "" )"
-                               href="@Url.Action("Show", "QRCode")">
-                                <i class="fas fa-qrcode"></i> Xem mã QR
                             </a>
                         </li>
                     </ul>

@@ -1,194 +1,183 @@
 ﻿@model BanKeKhaiNhapHoc.Models.HocVien
-
 @{
     ViewData["Title"] = "Chi tiết Bản Kê Khai Nhập Học";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="text-center">Chi tiết Bản Kê Khai Nhập Học</h1>
-<hr />
-<div>
-    <h4>Thông tin học viên</h4>
-    <dl class="row">
-        <!-- 1. Họ và tên -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HoTen)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.HoTen)
-        </dd>
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet">
 
-        <!-- 2. Giới tính -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.GioiTinh)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.GioiTinh)
-        </dd>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f4f6f9;
+    }
 
-        <!-- 3. Ngày tháng năm sinh -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NgaySinh)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NgaySinh)
-        </dd>
+    .card {
+        border: none;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        background-color: #fff;
+    }
 
-        <!-- 4. Nơi sinh -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NoiSinh)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NoiSinh)
-        </dd>
+    .card-header {
+        /* Gradient xanh dương nhạt tương tự hiệu ứng Index */
+        background: linear-gradient(45deg, #4facfe, #00f2fe);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 2rem;
+    }
 
-        <!-- 5. Quê quán -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QueQuan)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QueQuan)
-        </dd>
+    .card-body {
+        padding: 1.5rem;
+    }
 
-        <!-- 6. Dân tộc -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DanToc)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DanToc)
-        </dd>
+    .card-footer {
+        padding: 1rem;
+        text-align: center;
+    }
 
-        <!-- 7. Tôn giáo -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TonGiao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TonGiao)
-        </dd>
+    .btn-primary, .btn-secondary {
+        border-radius: 0.4rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
 
-        <!-- 8. Trình độ lý luận chính trị -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TrinhDoLyLuanChinhTri)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TrinhDoLyLuanChinhTri)
-        </dd>
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+        }
 
-        <!-- 9. Trình độ chuyên môn, nghiệp vụ -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TrinhDoChuyenMonNghiepVu)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TrinhDoChuyenMonNghiepVu)
-        </dd>
+    .table-bordered th,
+    .table-bordered td {
+        vertical-align: middle;
+    }
+</style>
 
-        <!-- 10. Đảng viên đảng CSVN -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DangVienCSVN)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DangVienCSVN)
-        </dd>
-
-        <!-- 11. Cán bộ - Cấp -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CanBo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CanBo)
-        </dd>
-
-        <!-- 11.2 Công chức - Cấp -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CongChucLevel)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CongChucLevel)
-        </dd>
-
-        <!-- 11.3 Người hoạt động không chuyên trách cấp xã -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NguoiHoatDongKhongChuyenTrach)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NguoiHoatDongKhongChuyenTrach)
-        </dd>
-
-        <!-- 12. Chức vụ (Đảng) -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ChucVu)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ChucVu)
-        </dd>
-
-        <!-- 12.2. Chính quyền -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ChinhQuyen)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ChinhQuyen)
-        </dd>
-
-        <!-- 12.3 Đoàn thể -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DoanThe)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DoanThe)
-        </dd>
-
-        <!-- 13. Đơn vị công tác -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DonViCongTac)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DonViCongTac)
-        </dd>
-
-        <!-- 14. Ngạch công chức, viên chức -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NgachCongChuc)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NgachCongChuc)
-        </dd>
-
-        <!-- 15. Hệ số lương -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HeSoLuong)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.HeSoLuong)
-        </dd>
-
-        <!-- 16. Hệ số phụ cấp chức vụ -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HeSoPhuCapChucVu)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.HeSoPhuCapChucVu)
-        </dd>
-
-        <!-- 17. Điện thoại di động -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DienThoaiDiDong)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DienThoaiDiDong)
-        </dd>
-
-        <!-- Thêm Email (nếu muốn hiển thị) -->
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-    </dl>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="mb-0">Chi tiết Bản Kê Khai Nhập Học</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Họ và tên</th>
+                            <td>@Html.DisplayFor(m => m.HoTen)</td>
+                        </tr>
+                        <tr>
+                            <th>Giới tính</th>
+                            <td>
+                                @if (Model.GioiTinh.HasValue)
+                                {
+                                    @(Model.GioiTinh.Value ? "Nam" : "Nữ")
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Ngày sinh</th>
+                            <td>@Html.DisplayFor(m => m.NgaySinh)</td>
+                        </tr>
+                        <tr>
+                            <th>Nơi sinh (Tỉnh)</th>
+                            <td>@Html.DisplayFor(m => m.NoiSinh)</td>
+                        </tr>
+                        <tr>
+                            <th>Quê quán (Tỉnh)</th>
+                            <td>@Html.DisplayFor(m => m.QueQuan)</td>
+                        </tr>
+                        <tr>
+                            <th>Dân tộc</th>
+                            <td>@Html.DisplayFor(m => m.DanToc)</td>
+                        </tr>
+                        <tr>
+                            <th>Tôn giáo</th>
+                            <td>@Html.DisplayFor(m => m.TonGiao)</td>
+                        </tr>
+                        <tr>
+                            <th>Trình độ lý luận chính trị</th>
+                            <td>@Html.DisplayFor(m => m.TrinhDoLyLuanChinhTri)</td>
+                        </tr>
+                        <tr>
+                            <th>Trình độ chuyên môn, nghiệp vụ</th>
+                            <td>@Html.DisplayFor(m => m.TrinhDoChuyenMonNghiepVu)</td>
+                        </tr>
+                        <tr>
+                            <th>Đảng viên đảng CSVN</th>
+                            <td>
+                                @if (Model.DangVienCSVN.HasValue)
+                                {
+                                    @(Model.DangVienCSVN.Value ? "Dự bị" : "Chính thức")
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Cán bộ (Cấp)</th>
+                            <td>@Html.DisplayFor(m => m.CanBo)</td>
+                        </tr>
+                        <tr>
+                            <th>Công chức (Cấp)</th>
+                            <td>@Html.DisplayFor(m => m.CongChucLevel)</td>
+                        </tr>
+                        <tr>
+                            <th>Người hoạt động không chuyên trách cấp xã</th>
+                            <td>
+                                @(Model.NguoiHoatDongKhongChuyenTrach ? "Có" : "Không")
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Chức vụ (Đảng)</th>
+                            <td>@Html.DisplayFor(m => m.ChucVu)</td>
+                        </tr>
+                        <tr>
+                            <th>Chính quyền</th>
+                            <td>@Html.DisplayFor(m => m.ChinhQuyen)</td>
+                        </tr>
+                        <tr>
+                            <th>Đoàn thể</th>
+                            <td>@Html.DisplayFor(m => m.DoanThe)</td>
+                        </tr>
+                        <tr>
+                            <th>Đơn vị công tác</th>
+                            <td>@Html.DisplayFor(m => m.DonViCongTac)</td>
+                        </tr>
+                        <tr>
+                            <th>Ngạch công chức, viên chức</th>
+                            <td>@Html.DisplayFor(m => m.NgachCongChuc)</td>
+                        </tr>
+                        <tr>
+                            <th>Hệ số lương</th>
+                            <td>@Html.DisplayFor(m => m.HeSoLuong)</td>
+                        </tr>
+                        <tr>
+                            <th>Hệ số phụ cấp chức vụ</th>
+                            <td>@Html.DisplayFor(m => m.HeSoPhuCapChucVu)</td>
+                        </tr>
+                        <tr>
+                            <th>Điện thoại di động</th>
+                            <td>@Html.DisplayFor(m => m.DienThoaiDiDong)</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>@Html.DisplayFor(m => m.Email)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary mr-2">
+                <i class="fa fa-edit"></i> Sửa
+            </a>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="fa fa-arrow-left"></i> Quay lại danh sách
+            </a>
+        </div>
+    </div>
 </div>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-</div>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

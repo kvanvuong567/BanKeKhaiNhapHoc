@@ -18,31 +18,36 @@ namespace BanKeKhaiNhapHoc.Controllers
             _context = context;
         }
 
-        // 📌 Danh sách tất cả học viên trong lớp
+        // GET: DanhSachLops
         public async Task<IActionResult> Index()
         {
             var danhSach = _context.DanhSachLop
                 .Include(d => d.HocVien)
-                .Include(d => d.LopHoc);
+                .Include(d => d.LopHoc)
+                // Lọc chỉ những học viên đã duyệt, tức là khi HocVien.IsApproved == true 
+                // (hoặc có thể lọc theo TrangThai == "Đậu" nếu bạn sử dụng trường này làm tiêu chí)
+                .Where(d => d.HocVien.IsApproved == true);
             return View(await danhSach.ToListAsync());
         }
 
-        // 📌 Xem chi tiết học viên trong lớp
+
+        // GET: DanhSachLops/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null) return NotFound();
+            if (id == null)
+                return NotFound();
 
             var danhSachLop = await _context.DanhSachLop
                 .Include(d => d.HocVien)
                 .Include(d => d.LopHoc)
                 .FirstOrDefaultAsync(m => m.Id == id);
-
-            if (danhSachLop == null) return NotFound();
+            if (danhSachLop == null)
+                return NotFound();
 
             return View(danhSachLop);
         }
 
-        // 📌 Form tạo mới danh sách lớp
+        // GET: DanhSachLops/Create
         public IActionResult Create()
         {
             ViewData["HocVienId"] = new SelectList(_context.Set<HocVien>(), "Id", "HoTen");
@@ -50,7 +55,7 @@ namespace BanKeKhaiNhapHoc.Controllers
             return View();
         }
 
-        // 📌 Xử lý khi tạo mới
+        // POST: DanhSachLops/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,HocVienId,LopHocId,TrangThai,NgayDangKy,NgayDuyet")] DanhSachLop danhSachLop)
@@ -66,25 +71,28 @@ namespace BanKeKhaiNhapHoc.Controllers
             return View(danhSachLop);
         }
 
-        // 📌 Form chỉnh sửa danh sách lớp
+        // GET: DanhSachLops/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null) return NotFound();
+            if (id == null)
+                return NotFound();
 
             var danhSachLop = await _context.DanhSachLop.FindAsync(id);
-            if (danhSachLop == null) return NotFound();
+            if (danhSachLop == null)
+                return NotFound();
 
             ViewData["HocVienId"] = new SelectList(_context.Set<HocVien>(), "Id", "HoTen", danhSachLop.HocVienId);
             ViewData["LopHocId"] = new SelectList(_context.Set<LopHoc>(), "Id", "TenLop", danhSachLop.LopHocId);
             return View(danhSachLop);
         }
 
-        // 📌 Xử lý khi chỉnh sửa
+        // POST: DanhSachLops/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,HocVienId,LopHocId,TrangThai,NgayDangKy,NgayDuyet")] DanhSachLop danhSachLop)
         {
-            if (id != danhSachLop.Id) return NotFound();
+            if (id != danhSachLop.Id)
+                return NotFound();
 
             if (ModelState.IsValid)
             {
@@ -95,8 +103,10 @@ namespace BanKeKhaiNhapHoc.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!_context.DanhSachLop.Any(e => e.Id == danhSachLop.Id)) return NotFound();
-                    else throw;
+                    if (!_context.DanhSachLop.Any(e => e.Id == danhSachLop.Id))
+                        return NotFound();
+                    else
+                        throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
@@ -105,30 +115,33 @@ namespace BanKeKhaiNhapHoc.Controllers
             return View(danhSachLop);
         }
 
-        // 📌 Form xác nhận xóa
+        // GET: DanhSachLops/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null) return NotFound();
+            if (id == null)
+                return NotFound();
 
             var danhSachLop = await _context.DanhSachLop
                 .Include(d => d.HocVien)
                 .Include(d => d.LopHoc)
                 .FirstOrDefaultAsync(m => m.Id == id);
-
-            if (danhSachLop == null) return NotFound();
+            if (danhSachLop == null)
+                return NotFound();
 
             return View(danhSachLop);
         }
 
-        // 📌 Xử lý khi xóa
+        // POST: DanhSachLops/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var danhSachLop = await _context.DanhSachLop.FindAsync(id);
-            if (danhSachLop != null) _context.DanhSachLop.Remove(danhSachLop);
-
-            await _context.SaveChangesAsync();
+            if (danhSachLop != null)
+            {
+                _context.DanhSachLop.Remove(danhSachLop);
+                await _context.SaveChangesAsync();
+            }
             return RedirectToAction(nameof(Index));
         }
     }

@@ -3,47 +3,122 @@
     ViewData["Title"] = "Danh sách học viên trúng tuyển";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!-- Thêm Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
 <style>
+    :root {
+        --primary-color: #1abc9c;
+        --primary-dark: #16a085;
+        --btn-custom: #3498db;
+        --btn-custom-hover: #2980b9;
+        --table-header-bg: #2c3e50;
+        --table-header-text: #ecf0f1;
+        --table-hover: #f8f9fa;
+        --badge-success-bg: #28a745;
+        --badge-secondary-bg: #6c757d;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        border: none;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        animation: fadeIn 0.8s ease-in-out;
+        background: #fff;
+    }
+
     .card-header {
-        background-image: linear-gradient(135deg, #1abc9c, #16a085);
-        font-weight: bold;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: var(--table-header-text);
+        text-align: center;
+        padding: 1.5rem 2rem;
+        font-size: 1.75rem;
+        font-weight: 600;
+        border-bottom: 2px solid rgba(236, 240, 241, 0.3);
     }
 
     .btn-custom {
-        background-color: #3498db;
-        border-color: #3498db;
+        background-color: var(--btn-custom);
+        border: none;
         color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
         .btn-custom:hover {
-            background-color: #2980b9;
-            border-color: #2980b9;
-            color: #fff;
+            background-color: var(--btn-custom-hover);
+            transform: translateY(-2px);
         }
 
-    .table thead {
-        background-color: #2c3e50;
-        color: #ecf0f1;
+    .table-responsive {
+        margin-top: 1rem;
     }
 
-    .table tbody tr:hover {
-        background-color: #f2f2f2;
+    .table thead {
+        background-color: var(--table-header-bg);
+        color: var(--table-header-text);
     }
+
+        .table thead th {
+            padding: 0.75rem;
+            vertical-align: middle;
+            border-bottom: 2px solid rgba(236, 240, 241, 0.3);
+        }
+
+    .table tbody td {
+        vertical-align: middle;
+        padding: 0.75rem;
+    }
+
+    .table tbody tr {
+        transition: background-color 0.3s ease;
+    }
+
+        .table tbody tr:hover {
+            background-color: var(--table-hover);
+        }
 
     .badge {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        padding: 0.5em 0.75em;
+    }
+
+    .badge-success {
+        background-color: var(--badge-success-bg);
+    }
+
+    .badge-secondary {
+        background-color: var(--badge-secondary-bg);
     }
 </style>
 
 <div class="container mt-4">
-    <div class="card shadow-lg">
-        <div class="card-header text-center text-white">
-            <h2 class="mb-0">DANH SÁCH HỌC VIÊN TRÚNG TUYỂN</h2>
+    <div class="card">
+        <div class="card-header">
+            DANH SÁCH HỌC VIÊN TRÚNG TUYỂN
         </div>
+        <br />
         <div class="card-body">
             <div class="mb-3 text-right">
-                <a href="@Url.Action("Create")" class="btn btn-custom"><i class="fas fa-plus"></i> Thêm mới</a>
+                <a href="@Url.Action("Create")" class="btn btn-custom">
+                    <i class="fas fa-plus"></i> Thêm mới
+                </a>
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered table-hover">
@@ -79,7 +154,7 @@
                                     <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i> Sửa
                                     </a>
-                                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-warning btn-sm">
+                                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm">
                                         <i class="fas fa-trash"></i> Xóa
                                     </a>
                                 </td>

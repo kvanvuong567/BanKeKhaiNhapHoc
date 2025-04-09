@@ -1,22 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\",
+  "WorkspaceRootPath": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\inetpub\\wwwroot\\BanKeKhaiNhapHocNew\\publish\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\qrcodecontroller.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\views\\hocviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\hocviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\views\\danhsachlops\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\danhsachlops\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\views\\lophocs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\lophocs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\hocvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\controllers\\hocvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\danhsachlopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\controllers\\danhsachlopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\lophocscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\controllers\\lophocscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\controllers\\qrcodecontroller.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\controllers\\qrcodecontroller.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\views\\qrcode\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\qrcode\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|c:\\users\\songc\\source\\repos\\bankekhainhaphoc\\bankekhainhaphoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\views\\danhsachlops\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\danhsachlops\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\views\\danhsachlops\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\danhsachlops\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\views\\lophocs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\lophocs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|d:\\monhoc\\thuctap\\bankekhainhaphoc\\bankekhainhaphoc\\views\\lophocs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F5E6F21-16E4-4D95-87BE-289CC451000C}|BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc.csproj|solutionrelative:bankekhainhaphoc\\views\\lophocs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,54 +66,158 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAqwDcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-17T08:41:51.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Show.cshtml",
-              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\QRCode\\Show.cshtml",
-              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\QRCode\\Show.cshtml",
-              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\QRCode\\Show.cshtml",
-              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\QRCode\\Show.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-17T08:41:27.678Z",
+              "Title": "web.config",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\BanKeKhaiNhapHocNew\\publish\\web.config",
+              "ToolTip": "C:\\inetpub\\wwwroot\\BanKeKhaiNhapHocNew\\publish\\web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-09T08:06:07.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "QRCodeController.cs.cs",
-              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\QRCodeController.cs.cs",
-              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\QRCodeController.cs.cs",
-              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\QRCodeController.cs.cs",
-              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\QRCodeController.cs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:21:04.648Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\HocViens\\Index.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\HocViens\\Index.cshtml",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\HocViens\\Index.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\HocViens\\Index.cshtml",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAOkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T18:33:24.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Program.cs",
-              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Program.cs",
-              "ToolTip": "C:\\Users\\songc\\source\\repos\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Program.cs",
-              "RelativeToolTip": "BanKeKhaiNhapHoc\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Index.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Index.cshtml",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Index.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T18:30:01.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DanhSachLopsController.cs",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\DanhSachLopsController.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\DanhSachLopsController.cs",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\DanhSachLopsController.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\DanhSachLopsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAhwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T07:30:18.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T18:07:59.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LopHocsController.cs",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\LopHocsController.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\LopHocsController.cs",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\LopHocsController.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\LopHocsController.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAUwMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T18:09:02.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HocViensController.cs",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\HocViensController.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\HocViensController.cs",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\HocViensController.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\HocViensController.cs",
+              "ViewState": "AgIAAOEBAAAAAAAAAAAhwAECAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T18:08:00.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QRCodeController.cs.cs",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\QRCodeController.cs.cs",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Controllers\\QRCodeController.cs.cs",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Controllers\\QRCodeController.cs.cs",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Controllers\\QRCodeController.cs.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T17:58:04.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\appsettings.json",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\appsettings.json",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\appsettings.json",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-03T17:37:15.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\LopHocs\\Index.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\LopHocs\\Index.cshtml",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\LopHocs\\Index.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\LopHocs\\Index.cshtml",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAALAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T08:49:27.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\LopHocs\\Edit.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\LopHocs\\Edit.cshtml",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\LopHocs\\Edit.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\LopHocs\\Edit.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAgwGYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T08:42:16.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Edit.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Edit.cshtml",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Edit.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Edit.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAiwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T08:40:00.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\LopHocs\\Delete.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\LopHocs\\Delete.cshtml",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\LopHocs\\Delete.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\LopHocs\\Delete.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T08:38:05.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Delete.cshtml",
+              "RelativeDocumentMoniker": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Delete.cshtml",
+              "ToolTip": "D:\\Monhoc\\Thuctap\\BanKeKhaiNhapHoc\\BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Delete.cshtml",
+              "RelativeToolTip": "BanKeKhaiNhapHoc\\Views\\DanhSachLops\\Delete.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAiwIEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T08:34:26.65Z"
             }
           ]
         }

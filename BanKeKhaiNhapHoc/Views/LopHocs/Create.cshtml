@@ -2,61 +2,154 @@
 
 @{
     ViewData["Title"] = "Create LopHoc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create LopHoc</h1>
-<hr />
+<!-- Thêm Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
-<div class="row">
-    <div class="col-md-6">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<style>
+    :root {
+        --primary-color: #5cb85c;
+        --primary-dark: #4cae4c;
+        --light-bg: #f8f9fa;
+    }
 
-            <div class="form-group">
-                <label asp-for="TenLop" class="control-label"></label>
-                <input asp-for="TenLop" class="form-control" />
-                <span asp-validation-for="TenLop" class="text-danger"></span>
-            </div>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--light-bg);
+        margin: 0;
+        padding: 0;
+    }
 
-            <div class="form-group">
-                <label asp-for="MoTaLop" class="control-label"></label>
-                <input asp-for="MoTaLop" class="form-control" />
-                <span asp-validation-for="MoTaLop" class="text-danger"></span>
-            </div>
+    .container {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
 
-            <div class="form-group">
-                <label asp-for="TenKhoaHoc" class="control-label"></label>
-                <input asp-for="TenKhoaHoc" class="form-control" />
-                <span asp-validation-for="TenKhoaHoc" class="text-danger"></span>
-            </div>
+    .card {
+        border: none;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+  
+    .card-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: #fff;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+    }
 
-            <div class="form-group">
-                <label asp-for="NgayBatDau" class="control-label"></label>
-                <input asp-for="NgayBatDau" class="form-control" type="date" />
-                <span asp-validation-for="NgayBatDau" class="text-danger"></span>
-            </div>
+    .card-body {
+        padding: 2rem;
+    }
 
-            <div class="form-group">
-                <label asp-for="NgayKetThuc" class="control-label"></label>
-                <input asp-for="NgayKetThuc" class="form-control" type="date" />
-                <span asp-validation-for="NgayKetThuc" class="text-danger"></span>
-            </div>
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
 
-            <div class="form-group">
-                <label asp-for="MoTaKhoaHoc" class="control-label"></label>
-                <input asp-for="MoTaKhoaHoc" class="form-control" />
-                <span asp-validation-for="MoTaKhoaHoc" class="text-danger"></span>
-            </div>
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    .form-control {
+        border-radius: 0.5rem;
+        border: 1px solid #ced4da;
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+        }
+
+    .btn-primary {
+        border-radius: 0.5rem;
+        background-color: var(--primary-color);
+        border: none;
+        transition: all 0.3s ease;
+        width: 100%;
+        padding: 0.75rem;
+        font-weight: 600;
+    }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+    .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 1.5rem;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            Create LopHoc
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="TenLop" class="control-label"></label>
+                    <input asp-for="TenLop" class="form-control" />
+                    <span asp-validation-for="TenLop" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MoTaLop" class="control-label"></label>
+                    <input asp-for="MoTaLop" class="form-control" />
+                    <span asp-validation-for="MoTaLop" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TenKhoaHoc" class="control-label"></label>
+                    <input asp-for="TenKhoaHoc" class="form-control" />
+                    <span asp-validation-for="TenKhoaHoc" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="NgayBatDau" class="control-label"></label>
+                    <input asp-for="NgayBatDau" class="form-control" type="date" />
+                    <span asp-validation-for="NgayBatDau" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="NgayKetThuc" class="control-label"></label>
+                    <input asp-for="NgayKetThuc" class="form-control" type="date" />
+                    <span asp-validation-for="NgayKetThuc" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MoTaKhoaHoc" class="control-label"></label>
+                    <input asp-for="MoTaKhoaHoc" class="form-control" />
+                    <span asp-validation-for="MoTaKhoaHoc" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="back-link">Back to List</a>
 </div>
 
 @section Scripts {

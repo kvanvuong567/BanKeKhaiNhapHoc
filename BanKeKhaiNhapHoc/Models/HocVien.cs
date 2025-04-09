@@ -50,40 +50,31 @@ namespace BanKeKhaiNhapHoc.Models
         [Display(Name = "Đảng viên đảng CSVN")]
         public bool? DangVienCSVN { get; set; }
 
-        // =============== PHẦN "CÁN BỘ, CÔNG CHỨC, KHÔNG CHUYÊN TRÁCH" ===============
-
-        // Thuộc tính lưu lựa chọn radio của "Cán bộ" (VD: "Cấp tỉnh", "Cấp huyện", "Cấp xã")
+        // PHẦN "CÁN BỘ, CÔNG CHỨC, KHÔNG CHUYÊN TRÁCH"
         [Display(Name = "Cán bộ - Cấp")]
         [StringLength(20)]
         public string? CanBo { get; set; }
 
-        // Thuộc tính lưu lựa chọn radio của "Công chức" (VD: "Cấp tỉnh", "Cấp huyện", "Cấp xã", "Hành chính")
         [Display(Name = "Công chức - Cấp")]
         [StringLength(20)]
         public string? CongChucLevel { get; set; }
 
-        // Thuộc tính checkbox cho "Người hoạt động không chuyên trách cấp xã"
         [Display(Name = "Người hoạt động không chuyên trách cấp xã")]
         public bool NguoiHoatDongKhongChuyenTrach { get; set; }
 
-        // =============== PHẦN CHỨC VỤ, CHỨC DANH ===============
-
-        // "Đảng"
+        // PHẦN CHỨC VỤ, CHỨC DANH
         [Display(Name = "Đảng")]
         [StringLength(100)]
         public string? ChucVu { get; set; }
 
-        // "Chính quyền" (Tỉnh / Huyện / Xã / Khác)
         [Display(Name = "Chính quyền")]
         [StringLength(100)]
         public string? ChinhQuyen { get; set; }
 
-        // Nếu muốn lưu riêng phần "Khác" khi chọn radio, thêm property này:
         [Display(Name = "Chính quyền (Khác)")]
         [StringLength(100)]
         public string? ChucVuChinhQuyenKhac { get; set; }
 
-        // "Đoàn thể"
         [Display(Name = "Đoàn thể")]
         [StringLength(100)]
         public string? DoanThe { get; set; }
@@ -110,6 +101,12 @@ namespace BanKeKhaiNhapHoc.Models
         [StringLength(100)]
         public string? Email { get; set; }
 
+        // Thuộc tính mới để đánh dấu trạng thái duyệt đậu của học viên
+        [Display(Name = "Trạng thái duyệt")]
+        public bool IsApproved { get; set; }
+
         public virtual ICollection<DanhSachLop>? DanhSachLops { get; set; }
+        [NotMapped]
+        public int? SelectedLopHocId { get; set; }
     }
 }

@@ -3,13 +3,55 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Chào mừng bạn đến với Bản Kê Khai Nhập Học</h1>
-<p>
-    Đây là trang chủ. Bạn có thể:
-</p>
-<ul>
-    <li><a href="~/HocViens">Quản lý Học Viên</a></li>
-    <li><a href="~/KhoaHocs">Quản lý Khoá Học</a></li>
-    <li><a href="~/LopHocs">Quản lý Lớp Học</a></li>
-    <li><a href="~/DanhSachLops">Ghi Danh Học Viên vào Lớp</a></li>
-</ul>
+<!-- Phần Hero: một khối lớn với nền màu xám nhạt -->
+<div class="jumbotron jumbotron-fluid text-center text-dark py-5" style="background: #e9ecef;">
+    <div style="padding: 50px;">
+        <h1 class="display-4">Chào mừng bạn đến với Bản Kê Khai Nhập Học</h1>
+        <p class="lead">Quản lý thông tin học viên, lớp học và ghi danh một cách trực quan, hiệu quả.</p>
+    </div>
+</div>
+
+<!-- Phần các thẻ chức năng chính -->
+<div class="container my-5">
+    <div class="row text-center justify-content-center">
+        <!-- Quản lý Học Viên -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <i class="fas fa-user-graduate fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">Quản lý Học Viên</h5>
+                    <p class="card-text">Xem, thêm, sửa, xóa thông tin học viên.</p>
+                    <a href="~/HocViens" class="btn btn-primary text-white" style="border-radius: 0.5rem;">
+                        Xem chi tiết
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Quản lý Lớp Học -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <i class="fas fa-chalkboard-teacher fa-3x mb-3 text-warning"></i>
+                    <h5 class="card-title">Quản lý Lớp Học</h5>
+                    <p class="card-text">Tạo và cập nhật thông tin lớp học.</p>
+                    <a href="~/LopHocs" class="btn btn-warning text-white" style="border-radius: 0.5rem;">
+                        Xem chi tiết
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Ghi Danh Học Viên -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <i class="fas fa-user-plus fa-3x mb-3 text-danger"></i>
+                    <h5 class="card-title">Ghi Danh Học Viên</h5>
+                    <p class="card-text">Đăng ký học viên vào lớp học một cách nhanh chóng.</p>
+                    <a href="~/DanhSachLops" class="btn btn-danger text-white" style="border-radius: 0.5rem;">
+                        Xem chi tiết
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
